@@ -2,71 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Muhammad Imran Sharif</title> 
+    <title>Muhammad Imran Sharif</title>
     <style>
         body {
-            text-align: center;
-            background-color: #333;
-            color: white;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header, .nav, .main, .footer {
             padding: 20px;
+            margin: 10px;
+            background: #fff;
+            border-radius: 8px;
         }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
+        .header {
+            text-align: center;
         }
-        .buttons {
-            margin-top: 20px;
-        }
-        .buttons a {
-            margin: 0 5px;
-            color: #00f;
+        .nav a {
+            margin: 0 15px;
+            color: #333;
             text-decoration: none;
         }
-        .intro {
-            margin-top: 20px;
-            text-align: left;
-            color: #ccc;
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
-        nav {
-            margin-bottom: 20px;
+        .sidebar {
+            float: left;
+            width: 30%;
+            text-align: center;
         }
-        nav a {
-            margin: 0 10px;
-            color: #fff;
+        .content {
+            float: right;
+            width: 65%;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info li {
+            margin: 10px 0;
+        }
+        .contact-info a {
+            color: #1e90ff;
             text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <nav>
+        <header class="header">
+            <h1>Muhammad Imran Sharif</h1>
+            <p>Ph.D. Student<br>Kansas State University<br>Department of Computer Science</p>
+        </header>
+        <nav class="nav">
             <a href="index.html">Homepage</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Teaching</a>
             <a href="news.html">News</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="resume.html">Resume</a>
+            <a href="cv.html">CV</a>
         </nav>
-        <img src="assets/image.png" alt="Profile Picture" class="profile-img">
-        <h1>Muhammad Imran Sharif</h1>
-        <p>Ph.D. Student<br>Kansas State University<br>Department of Computer Science</p>
-        <p>Email: <a href="mailto:imransharif@ksu.edu">imransharif@ksu.edu</a></p>
-        <div class="buttons">
-            <a href="calendar-link">Calendar</a>
-            <a href="mailto:imransharif@ksu.edu">Email</a>
-            <a href="https://scholar.google.com/citations?user=hd8iAGoAA">Google Scholar</a>
-            <a href="https://orcid.org/my-orcid?orcid=0000-0002-4786-6579">ORCID</a>
-        </div>
-        <div class="intro">
-            <p>Hello! I am Muhammad Imran Sharif, a dedicated Ph.D. student at Kansas State University in the Department of Computer Science. My research interests include Artificial Intelligence, Machine Learning, Computer Vision, and Image Processing. I am passionate about advancing the field of computer science through innovative research and collaboration.</p>
-            <p>My academic journey has been marked by notable achievements, including the Nebraska Engineering Recruitment Fellowship and the Exceptional PhD Candidate Fellowship. With a strong foundation in both theoretical knowledge and practical applications, I aim to contribute significantly to the scientific community.</p>
-            <p>In my current research, I am focusing on leveraging cutting-edge technologies to solve complex problems in computer vision. My goal is to develop algorithms and systems that can improve the accuracy and efficiency of visual recognition tasks, ultimately benefiting various real-world applications.</p>
-            <p>I am always open to new opportunities for collaboration and learning. Feel free to explore my Google Scholar and ORCID profiles for more details on my publications and research contributions. If you have any questions or would like to discuss potential collaborations, please do not hesitate to contact me via email.</p>
+        <div class="main clearfix">
+            <aside class="sidebar">
+                <img src="image.png" alt="Profile Picture" class="profile-img">
+                <h2>Muhammad Imran Sharif</h2>
+                <ul class="contact-info">
+                    <li>Ph.D. Student</li>
+                    <li>Kansas State University</li>
+                    <li><a href="mailto:imransharif@ksu.edu">imransharif@ksu.edu</a></li>
+                    <li><a href="calendar-link">Calendar</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=hd8iAGoAA">Google Scholar</a></li>
+                    <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-4786-6579">ORCID</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                <p>Hello! I am Muhammad Imran Sharif, a dedicated Ph.D. student at Kansas State University in the Department of Computer Science. My research interests include Artificial Intelligence, Machine Learning, Computer Vision, and Image Processing. I am passionate about advancing the field of computer science through innovative research and collaboration.</p>
+                <p>My academic journey has been marked by notable achievements, including the Nebraska Engineering Recruitment Fellowship and the Exceptional PhD Candidate Fellowship. With a strong foundation in both theoretical knowledge and practical applications, I aim to contribute significantly to the scientific community.</p>
+                <p>In my current research, I am focusing on leveraging cutting-edge technologies to solve complex problems in computer vision. My goal is to develop algorithms and systems that can improve the accuracy and efficiency of visual recognition tasks, ultimately benefiting various real-world applications.</p>
+                <p>I am always open to new opportunities for collaboration and learning. Feel free to explore my Google Scholar and ORCID profiles for more details on my publications and research contributions. If you have any questions or would like to discuss potential collaborations, please do not hesitate to contact me via email.</p>
+            </section>
         </div>
     </div>
 </body>
