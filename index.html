@@ -17,34 +17,42 @@
             margin: auto;
             overflow: hidden;
         }
-        .header, .nav, .main, .footer {
-            padding: 20px;
-            margin: 10px;
-            background: #fff;
-            border-radius: 8px;
-        }
-        .header {
+        header {
             text-align: center;
+            padding: 20px;
         }
-        .nav a {
-            margin: 0 15px;
-            color: #333;
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
             text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background: #575757;
         }
         .profile-img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
+            margin-top: 20px;
         }
         .sidebar {
             float: left;
             width: 30%;
             text-align: center;
+            padding: 20px;
         }
         .content {
             float: right;
             width: 65%;
+            padding: 20px;
         }
         .clearfix::after {
             content: "";
@@ -66,20 +74,20 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header>
             <h1>Muhammad Imran Sharif</h1>
             <p>Ph.D. Student<br>Kansas State University<br>Department of Computer Science</p>
         </header>
-        <nav class="nav">
+        <nav>
             <a href="index.html">Homepage</a>
             <a href="publications.html">Publications</a>
             <a href="teaching.html">Teaching</a>
             <a href="news.html">News</a>
             <a href="cv.html">CV</a>
         </nav>
-        <div class="main clearfix">
+        <div class="clearfix">
             <aside class="sidebar">
-                <img src="image.png" alt="Profile Picture" class="profile-img">
+                <img src="assets/image.png" alt="Profile Picture" class="profile-img">
                 <h2>Muhammad Imran Sharif</h2>
                 <ul class="contact-info">
                     <li>Ph.D. Student</li>
