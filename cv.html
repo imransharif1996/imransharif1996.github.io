@@ -75,7 +75,8 @@
             color: #333;
         }
         .cv-icon {
-            display: inline-block;
+            display: flex;
+            justify-content: center;
             margin-top: 20px;
             font-size: 18px;
         }
@@ -161,13 +162,7 @@
     <script>
         function downloadCV() {
             const element = document.getElementById('cv-content');
-            html2pdf(element, {
-                margin: 10,
-                filename: 'Muhammad_Imran_Sharif_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            });
+            html2pdf().from(element).save('Muhammad_Imran_Sharif_CV.pdf');
         }
     </script>
 </body>
