@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CV - Muhammad Imran Sharif</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,6 +74,24 @@
             padding-right: 0.5em;
             color: #333;
         }
+        .cv-icon {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .cv-icon button {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .cv-icon button:hover {
+            background: #333;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -85,7 +104,7 @@
             <a href="cv.html">CV</a>
             <a href="gallery.html">Gallery</a>
         </nav>
-        <div class="cv-section">
+        <div id="cv-content" class="cv-section">
             <div class="cv-header">
                 <img src="image.png" alt="Muhammad Imran Sharif">
                 <div>
@@ -135,6 +154,21 @@
                 <p><strong>Citations:</strong> 700</p>
             </div>
         </div>
+        <div class="cv-icon">
+            <button onclick="downloadCV()">Download CV</button>
+        </div>
     </div>
+    <script>
+        function downloadCV() {
+            const element = document.getElementById('cv-content');
+            html2pdf(element, {
+                margin: 10,
+                filename: 'Muhammad_Imran_Sharif_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            });
+        }
+    </script>
 </body>
 </html>
