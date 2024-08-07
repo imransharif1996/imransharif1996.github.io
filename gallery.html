@@ -3,8 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .gallery-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            display: block;
+        }
+        .gallery-item p {
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,13 +72,19 @@
                 <li><a href="index.html">Homepage</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="resume.html">Resume</a></li>
+                <li><a href="cv.html">Resume</a></li>
             </ul>
         </nav>
     </header>
-    <section id="news">
-        <h1>News</h1>
-        <p>Here you can add your latest news and updates.</p>
-    </section>
+    <div class="container">
+        <section class="gallery-section">
+            <!-- Add your new image here -->
+            <div class="gallery-item">
+                <img src="path_to_your_image.jpg" alt="Poster Presentation">
+                <p>Poster Presentation at AI Symposium</p>
+            </div>
+            <!-- Add more gallery items here if needed -->
+        </section>
+    </div>
 </body>
 </html>
