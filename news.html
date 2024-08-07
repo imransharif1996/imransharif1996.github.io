@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav ul {
+            padding: 0;
+            list-style: none;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .news-section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-section h3 {
+            margin-top: 0;
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-item h4 {
+            margin: 0;
+            color: #333;
+        }
+        .news-item p {
+            margin: 5px 0 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,7 +73,7 @@
     </header>
     <div class="container">
         <section class="news-section">
-            <h3>News</h3>
+            <h3>Latest News</h3>
             <div class="news-item">
                 <h4>Poster Presentation at AI Symposium</h4>
                 <p>On October 16th, 2023, we presented our poster at the AI Symposium - Poster Session held at Hale Library, Kansas State University. Our poster showcased our CNAP project on rodent behavior recognition using deep learning techniques.</p>
