@@ -36,39 +36,46 @@
         nav a:hover {
             background: #575757;
         }
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
         .profile-img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
-            margin-top: 20px;
         }
-        .sidebar {
-            float: left;
-            width: 30%;
-            text-align: center;
-            padding: 20px;
+        .profile-details {
+            flex: 1;
+            margin-left: 20px;
         }
-        .content {
-            float: right;
-            width: 65%;
-            padding: 20px;
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
+        .profile-details h2 {
+            margin: 0;
         }
         .contact-info {
             list-style: none;
             padding: 0;
+            margin: 10px 0 0;
         }
         .contact-info li {
-            margin: 10px 0;
+            margin: 5px 0;
         }
         .contact-info a {
             color: #1e90ff;
             text-decoration: none;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -82,27 +89,25 @@
             <a href="cv.html">CV</a>
             <a href="gallery.html">Gallery</a>
         </nav>
-        <div class="clearfix">
-            <aside class="sidebar">
-                <img src="assets/image.png" alt="Profile Picture" class="profile-img">
+        <div class="profile-section">
+            <img src="assets/image.png" alt="Profile Picture" class="profile-img">
+            <div class="profile-details">
                 <h2>Muhammad Imran Sharif</h2>
+                <p>Ph.D. Student<br>Kansas State University<br>Department of Computer Science</p>
                 <ul class="contact-info">
-                    <li>Ph.D. Student</li>
-                    <li>Kansas State University</li>
                     <li><a href="mailto:imransharif@ksu.edu">imransharif@ksu.edu</a></li>
                     <li><a href="calendar-link">Calendar</a></li>
                     <li><a href="https://scholar.google.com/citations?user=hd8iAGoAA">Google Scholar</a></li>
                     <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-4786-6579">ORCID</a></li>
                 </ul>
-            </aside>
-            <section class="content">
-                <p>Hello! I am Muhammad Imran Sharif, a dedicated Ph.D. student at Kansas State University in the Department of Computer Science. My research interests include Artificial Intelligence, Machine Learning, Computer Vision, and Image Processing. I am passionate about advancing the field of computer science through innovative research and collaboration.</p>
-                <p>My academic journey has been marked by notable achievements, including the Nebraska Engineering Recruitment Fellowship and the Exceptional PhD Candidate Fellowship. With a strong foundation in both theoretical knowledge and practical applications, I aim to contribute significantly to the scientific community.</p>
-                <p>In my current research, I am focusing on leveraging cutting-edge technologies to solve complex problems in computer vision. My goal is to develop algorithms and systems that can improve the accuracy and efficiency of visual recognition tasks, ultimately benefiting various real-world applications.</p>
-                <p>I am always open to new opportunities for collaboration and learning. Feel free to explore my Google Scholar and ORCID profiles for more details on my publications and research contributions. If you have any questions or would like to discuss potential collaborations, please do not hesitate to contact me via email.</p>
-            </section>
+            </div>
+        </div>
+        <div class="content">
+            <p>Hello! I am Muhammad Imran Sharif, a dedicated Ph.D. student at Kansas State University in the Department of Computer Science. My research interests include Artificial Intelligence, Machine Learning, Computer Vision, and Image Processing. I am passionate about advancing the field of computer science through innovative research and collaboration.</p>
+            <p>My academic journey has been marked by notable achievements, including the Nebraska Engineering Recruitment Fellowship and the Exceptional PhD Candidate Fellowship. With a strong foundation in both theoretical knowledge and practical applications, I aim to contribute significantly to the scientific community.</p>
+            <p>In my current research, I am focusing on leveraging cutting-edge technologies to solve complex problems in computer vision. My goal is to develop algorithms and systems that can improve the accuracy and efficiency of visual recognition tasks, ultimately benefiting various real-world applications.</p>
+            <p>I am always open to new opportunities for collaboration and learning. Feel free to explore my Google Scholar and ORCID profiles for more details on my publications and research contributions. If you have any questions or would like to discuss potential collaborations, please do not hesitate to contact me via email.</p>
         </div>
     </div>
 </body>
 </html>
- 
