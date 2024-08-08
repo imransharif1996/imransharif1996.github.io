@@ -133,6 +133,23 @@
         .cv-icon button:hover {
             background: #555;
         }
+        .download-button-top {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .download-button-top button {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .download-button-top button:hover {
+            background: #555;
+        }
     </style>
 </head>
 <body>
@@ -143,6 +160,9 @@
             <a href="news.html">News</a>
             <a href="gallery.html">Gallery</a>
         </nav>
+        <div class="download-button-top">
+            <button onclick="downloadCV()">Download CV</button>
+        </div>
         <div id="cv-content" class="cv-section">
             <div class="cv-left">
                 <img src="image.png" alt="Muhammad Imran Sharif">
