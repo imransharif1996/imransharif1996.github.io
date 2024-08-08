@@ -15,7 +15,7 @@
         }
         .container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 900px;
             margin: auto;
             overflow: hidden;
         }
@@ -37,17 +37,20 @@
         .cv-section {
             display: flex;
             background: #fff;
-            padding: 20px;
+            padding: 0;
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .cv-left {
-            width: 30%;
-            background: #333;
+            width: 35%;
+            background: #2f4f4f;
             color: white;
             padding: 20px;
             border-radius: 8px 0 0 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .cv-left img {
             border-radius: 50%;
@@ -55,20 +58,25 @@
             width: 150px;
             height: 150px;
         }
-        .cv-left p {
+        .cv-left h3, .cv-left p, .cv-left ul {
+            text-align: center;
             margin: 10px 0;
         }
-        .cv-left h3 {
-            border-bottom: 2px solid white;
-            padding-bottom: 5px;
+        .cv-left ul {
+            list-style: none;
+            padding: 0;
+        }
+        .cv-left ul li::before {
+            content: "•";
+            padding-right: 0.5em;
             color: white;
         }
         .cv-right {
-            width: 70%;
+            width: 65%;
             padding: 20px;
         }
         .cv-right h1 {
-            margin: 0;
+            margin: 0 0 20px;
             color: #004080;
         }
         .cv-right h2 {
@@ -76,9 +84,9 @@
             border-bottom: 2px solid #004080;
             padding-bottom: 5px;
             color: #004080;
+            margin-top: 0;
         }
         .cv-right h3 {
-            margin-top: 10px;
             color: #004080;
         }
         .cv-right p {
@@ -129,12 +137,10 @@
         <div id="cv-content" class="cv-section">
             <div class="cv-left">
                 <img src="image.png" alt="Muhammad Imran Sharif">
-                <div class="cv-contact">
-                    <h3>Contact</h3>
-                    <p><strong>Phone:</strong> +1 402-840-1131</p>
-                    <p><strong>Email:</strong> imransharif@ksu.edu</p>
-                    <p><strong>Address:</strong> 1601 Hillcrest Dr Apt 9, Manhattan, KS 66502, USA</p>
-                </div>
+                <h3>Contact</h3>
+                <p><strong>Phone:</strong> +1 402-840-1131</p>
+                <p><strong>Email:</strong> imransharif@ksu.edu</p>
+                <p><strong>Address:</strong> 1601 Hillcrest Dr Apt 9, Manhattan, KS 66502, USA</p>
                 <h3>Research Interest</h3>
                 <ul>
                     <li>Artificial Intelligence</li>
@@ -161,7 +167,7 @@
                 <div>
                     <h3>2023-Cont. Graduate Research Assistant</h3>
                     <p>Kansas State University, KS, USA</p>
-                    <h3>2019-2022 IT Specialist (Remotely Job)</h3>
+                    <h3>2019-2022 IT Specialist (Remote Job)</h3>
                     <p>Caiman Haiti Foundation, Bronx NY, USA</p>
                 </div>
                 <h2>Awards</h2>
