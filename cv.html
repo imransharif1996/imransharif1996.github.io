@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.4;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -15,7 +15,7 @@
         }
         .container {
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             overflow: hidden;
         }
@@ -37,10 +37,9 @@
         .cv-section {
             display: flex;
             background: #fff;
-            margin: 10px 0;
+            margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 10px;
         }
         .cv-left {
             width: 30%;
@@ -50,13 +49,13 @@
             border-radius: 8px 0 0 8px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
         }
         .cv-left img {
             border-radius: 50%;
             margin-bottom: 20px;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
         }
         .cv-left h3 {
             text-align: center;
@@ -66,7 +65,7 @@
         }
         .cv-left p, .cv-left ul {
             text-align: center;
-            margin: 5px 0;
+            margin: 10px 0;
         }
         .cv-left ul {
             list-style: none;
@@ -74,7 +73,7 @@
         }
         .cv-left ul li::before {
             content: "•";
-            padding-right: 0.3em;
+            padding-right: 0.5em;
             color: white;
         }
         .cv-right {
@@ -82,13 +81,13 @@
             padding: 20px;
         }
         .cv-right h1 {
-            margin: 0 0 10px;
+            margin: 0 0 20px;
             color: #333;
         }
         .cv-right h2 {
             text-align: left;
             border-bottom: 2px solid #333;
-            padding-bottom: 3px;
+            padding-bottom: 5px;
             color: #333;
             margin-top: 0;
         }
@@ -96,7 +95,7 @@
             color: #333;
         }
         .cv-right p {
-            margin: 5px 0;
+            margin: 10px 0;
         }
         .cv-right ul {
             list-style: none;
@@ -108,17 +107,17 @@
         }
         .cv-right ul li::before {
             content: "•";
-            padding-right: 0.3em;
+            padding-right: 0.5em;
             color: #333;
         }
         .education-item, .experience-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
         .education-item h3, .experience-item h3 {
             flex: 1;
-            margin-right: 5px;
+            margin-right: 10px;
         }
         .education-item div, .experience-item div {
             flex: 3;
@@ -128,12 +127,12 @@
         }
         .cv-icon, .download-button-top {
             text-align: right;
-            margin: 10px 0;
+            margin: 20px 0;
         }
         .cv-icon button, .download-button-top button {
             text-decoration: none;
             color: white;
-            padding: 5px 10px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             background-color: #333;
@@ -144,7 +143,7 @@
             background: #555;
         }
         .download-button-top {
-            margin-top: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -162,24 +161,18 @@
         <div id="cv-content" class="cv-section">
             <div class="cv-left">
                 <img src="image.png" alt="Muhammad Imran Sharif">
-                <div>
-                    <h3>Contact</h3>
-                    <p><strong>Phone:</strong> +1 402-840-1131</p>
-                    <p><strong>Email:</strong> imransharif@ksu.edu</p>
-                    <p><strong>Address:</strong> 1601 Hillcrest Dr Apt 9, Manhattan, KS 66502, USA</p>
-                </div>
-                <div>
-                    <h3>Research Interest</h3>
-                    <p>Artificial Intelligence</p>
-                    <p>Machine/Deep learning</p>
-                    <p>Computer Vision</p>
-                    <p>Image/Video Processing</p>
-                </div>
-                <div>
-                    <h3>Statistics</h3>
-                    <p><strong>Total Impact Factor:</strong> 76.89</p>
-                    <p><strong>Citations:</strong> 700</p>
-                </div>
+                <h3>Contact</h3>
+                <p><strong>Phone:</strong> +1 402-840-1131</p>
+                <p><strong>Email:</strong> imransharif@ksu.edu</p>
+                <p><strong>Address:</strong> 1601 Hillcrest Dr Apt 9, Manhattan, KS 66502, USA</p>
+                <h3>Research Interest</h3>
+                <p>Artificial Intelligence</p>
+                <p>Machine/Deep learning</p>
+                <p>Computer Vision</p>
+                <p>Image/Video Processing</p>
+                <h3>Statistics</h3>
+                <p><strong>Total Impact Factor:</strong> 76.89</p>
+                <p><strong>Citations:</strong> 700</p>
             </div>
             <div class="cv-right">
                 <h1>Muhammad Imran Sharif</h1>
@@ -241,4 +234,3 @@
     </script>
 </body>
 </html>
-
