@@ -1,113 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        header nav ul {
-            padding: 0;
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-        header nav ul li {
-            margin: 0 15px;
-        }
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .gallery-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .gallery-item {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 300px;
-            margin-bottom: 20px;
-        }
-        .gallery-item img {
-            width: 100%;
-            display: block;
-        }
-        .gallery-item p {
-            padding: 10px;
-            text-align: center;
-            margin: 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header nav ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    header nav ul li {
+      margin: 0 15px;
+    }
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .gallery-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+    .gallery-item p {
+      padding: 10px;
+      text-align: center;
+      margin: 0;
+    }
+
+    /* Slider styling */
+    .slider {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    .slide {
+      width: 100%;
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Homepage</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="cv.html">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="gallery-section">
-            <!-- Gallery item 1 -->
-            <div class="gallery-item">
-                <img src="PosterPresentation2023.png" alt="Poster Presentation">
-                <p>Poster Presentation at AI Symposium<br>October 16th, 2023</p>
-            </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="cv.html">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <!-- Gallery item 2 -->
-            <div class="gallery-item">
-                <img src="Profs-Doina-House-Party.jpg" alt="Professor Doina Caragea's House Party">
-                <p>Great way to end the semester (Spring 2024) on May 5th with a party at Professor Doina Caragea's house! So happy to be with my lab friends. 🎉📚</p>
-            </div>
+  <div class="container">
+    <section class="gallery-section">
+      <!-- Gallery item 1 -->
+      <div class="gallery-item">
+        <img src="PosterPresentation2023.png" alt="Poster Presentation" />
+        <p>
+          Poster Presentation at AI Symposium<br />
+          October 16th, 2023
+        </p>
+      </div>
 
-            <!-- Gallery item 3 -->
-            <div class="gallery-item">
-                <img src="RootsofResearchTree2025.jpeg" alt="Roots of Research Tree Event - Professor Doina Caragea">
-                <p>Roots of Research Tree Event 🌳<br>April 21, 2025 — Honoring Professor Doina Caragea<br>
-                (Location: Southeast side of Engineering/Durland Hall)</p>
-            </div>
+      <!-- Gallery item 2 -->
+      <div class="gallery-item">
+        <img src="Profs-Doina-House-Party.jpg" alt="Professor Doina Caragea's House Party" />
+        <p>
+          Great way to end the semester (Spring 2024) on May 5th with a party at
+          Professor Doina Caragea's house! So happy to be with my lab friends. 🎉📚
+        </p>
+      </div>
 
-            <!-- Gallery item 4: CNAP Poster Presentation 2025 -->
-            <div class="gallery-item">
-                <img src="PosterPresentation2025.JPG" alt="CNAP Poster Presentation 2025">
-                <p>
-                    <strong>CNAP Poster Presentation 2025</strong><br>
-                    CNAP Site Visit — Poster Session<br>
-                    Kansas State University, Department of Psychological Sciences<br>
-                    Presented my research on rodent behavior recognition 🧠🐭
-                </p>
-            </div>
-        </section>
-    </div>
+      <!-- Gallery item 3 -->
+      <div class="gallery-item">
+        <img src="RootsofResearchTree2025.jpeg" alt="Roots of Research Tree Event - Professor Doina Caragea" />
+        <p>
+          Roots of Research Tree Event 🌳<br />
+          April 21, 2025 — Honoring Professor Doina Caragea<br />
+          (Location: Southeast side of Engineering/Durland Hall)
+        </p>
+      </div>
+
+      <!-- Gallery item 4 with slider -->
+      <div class="gallery-item">
+        <div class="slider">
+          <img src="Poster%20Presentation%202025.jpeg" class="slide active" alt="Poster Presentation 2025" />
+          <img src="PosterPresentation2023.png" class="slide" alt="Alternate View" />
+        </div>
+        <p>
+          <strong>CNAP Poster Presentation 2025</strong><br />
+          CNAP Site Visit — Poster Session<br />
+          Kansas State University, Department of Psychological Sciences<br />
+          Presented my research on rodent behavior recognition 🧠🐭
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const slides = document.querySelectorAll(".slider .slide");
+      let current = 0;
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 3000); // 3-second interval
+    });
+  </script>
 </body>
 </html>
+
