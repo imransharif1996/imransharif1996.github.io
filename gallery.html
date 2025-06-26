@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,6 +62,21 @@
             text-align: center;
             margin: 0;
         }
+
+        /* Slider styles */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        .slider img {
+            width: 100%;
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slider img.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -76,6 +90,7 @@
             </ul>
         </nav>
     </header>
+
     <div class="container">
         <section class="gallery-section">
             <!-- Gallery item 1 -->
@@ -90,31 +105,40 @@
                 <p>Great way to end the semester (Spring 2024) on May 5th with a party at Professor Doina Caragea's house! So happy to be with my lab friends. 🎉📚</p>
             </div>
 
-            <!-- New Gallery item 3 -->
+            <!-- Gallery item 3 -->
             <div class="gallery-item">
                 <img src="RootsofResearchTree2025.jpeg" alt="Roots of Research Tree Event - Professor Doina Caragea">
                 <p>Roots of Research Tree Event 🌳<br>April 21, 2025 — Honoring Professor Doina Caragea<br>
                 (Location: Southeast side of Engineering/Durland Hall)</p>
             </div>
 
-            <!-- Combined Gallery item with slider -->
-<div class="gallery-item">
-    <div class="slider">
-        <img src="PosterPresentation2025.jpeg" class="slide active" alt="Poster Presentation">
-        <img src="Poster-2025-CNAP.png" class="slide" alt="CNAP Poster">
-    </div>
-    <p>
-        <strong>CNAP Poster Presentation 2025</strong><br>
-        CNAP Site Visit — Poster Session<br>
-        Kansas State University, Department of Psychological Sciences<br>
-        Presented my research on rodent behavior recognition 🧠🐭
-    </p>
-</div>
-
+            <!-- Gallery item 4: CNAP Poster with slider -->
+            <div class="gallery-item">
+                <div class="slider">
+                    <img src="PosterPresentation2025.jpeg" class="slide active" alt="Poster Presentation">
+                    <img src="Poster-2025-CNAP.png" class="slide" alt="CNAP Poster">
+                </div>
+                <p>
+                    <strong>CNAP Poster Presentation 2025</strong><br>
+                    CNAP Site Visit — Poster Session<br>
+                    Kansas State University, Department of Psychological Sciences<br>
+                    Presented my research on rodent behavior recognition 🧠🐭
+                </p>
+            </div>
         </section>
     </div>
+
+    <!-- JavaScript for slider -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll('.slider .slide');
+            let index = 0;
+            setInterval(() => {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }, 3000); // Switch every 3 seconds
+        });
+    </script>
 </body>
 </html>
-
-
-
