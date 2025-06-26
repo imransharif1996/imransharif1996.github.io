@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,21 +63,6 @@
             text-align: center;
             margin: 0;
         }
-
-        /* Slider styles */
-        .slider {
-            position: relative;
-            width: 100%;
-            height: auto;
-        }
-        .slider img {
-            width: 100%;
-            display: none;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .slider img.active {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -90,7 +76,6 @@
             </ul>
         </nav>
     </header>
-
     <div class="container">
         <section class="gallery-section">
             <!-- Gallery item 1 -->
@@ -112,12 +97,9 @@
                 (Location: Southeast side of Engineering/Durland Hall)</p>
             </div>
 
-            <!-- Gallery item 4: CNAP Poster with slider -->
+            <!-- Gallery item 4: CNAP Poster Presentation 2025 -->
             <div class="gallery-item">
-                <div class="slider">
-                    <img src="PosterPresentation2025.jpeg" class="slide active" alt="Poster Presentation">
-                    <img src="Poster-2025-CNAP.png" class="slide" alt="CNAP Poster">
-                </div>
+                <img src="PosterPresentation2025.JPG" alt="CNAP Poster Presentation 2025">
                 <p>
                     <strong>CNAP Poster Presentation 2025</strong><br>
                     CNAP Site Visit — Poster Session<br>
@@ -127,18 +109,5 @@
             </div>
         </section>
     </div>
-
-    <!-- JavaScript for slider -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const slides = document.querySelectorAll('.slider .slide');
-            let index = 0;
-            setInterval(() => {
-                slides[index].classList.remove('active');
-                index = (index + 1) % slides.length;
-                slides[index].classList.add('active');
-            }, 3000); // Switch every 3 seconds
-        });
-    </script>
 </body>
 </html>
