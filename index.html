@@ -22,7 +22,7 @@
   --font:'Sora',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);background-image:radial-gradient(rgba(99,102,241,.03) 1px,transparent 1px);background-size:20px 20px;color:var(--ink);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--p1);text-decoration:none;transition:all var(--ease)}
 a:hover{color:var(--p2)}
 ::selection{background:var(--p1);color:#fff}
@@ -39,23 +39,29 @@ a:hover{color:var(--p2)}
 }
 
 /* HERO */
-.hero-wrap{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 25%,#4338ca 50%,#6366f1 75%,#818cf8 100%);position:relative;overflow:hidden}
-.hero-wrap::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(236,72,153,.3) 0%,transparent 70%);border-radius:50%;animation:float 8s ease-in-out infinite}
-.hero-wrap::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(245,158,11,.2) 0%,transparent 70%);border-radius:50%;animation:float 10s ease-in-out infinite reverse}
+.hero-wrap{background:linear-gradient(135deg,#0f0a2e 0%,#1e1b4b 20%,#312e81 45%,#4338ca 65%,#6366f1 85%,#818cf8 100%);position:relative;overflow:hidden}
+.hero-wrap::before{content:'';position:absolute;top:-50%;right:-20%;width:700px;height:700px;background:radial-gradient(circle,rgba(236,72,153,.35) 0%,transparent 60%);border-radius:50%;animation:float 8s ease-in-out infinite}
+.hero-wrap::after{content:'';position:absolute;bottom:-30%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(245,158,11,.25) 0%,transparent 60%);border-radius:50%;animation:float 10s ease-in-out infinite reverse}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:24px 24px;z-index:0}
+.hero-glow{position:absolute;top:20%;left:50%;width:400px;height:400px;background:radial-gradient(circle,rgba(99,102,241,.4) 0%,transparent 70%);border-radius:50%;filter:blur(80px);z-index:0;animation:pulse 5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px)}}
 .hero{max-width:var(--max);margin:0 auto;padding:120px 28px 70px;position:relative;z-index:1;display:grid;grid-template-columns:1fr 200px;gap:36px;align-items:center}
-.hero h1{font-size:2.6rem;font-weight:800;line-height:1.08;letter-spacing:-.04em;color:#fff;margin-bottom:8px}
+.hero h1{font-size:2.8rem;font-weight:800;line-height:1.08;letter-spacing:-.04em;color:#fff;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,#c7d2fe 50%,#fbbf24 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:shimmer 4s ease infinite}
+@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .hero-sub{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:480px;line-height:1.65}
 .hero-nums{display:flex;gap:28px;margin-bottom:20px}
 .hn{text-align:left}
-.hn-val{font-family:var(--mono);font-size:1.4rem;font-weight:700;color:#fff;line-height:1}
+.hn-val{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:#fff;line-height:1;text-shadow:0 0 20px rgba(255,255,255,.3)}
 .hn-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-top:2px}
 .hero-btns{display:flex;gap:8px;flex-wrap:wrap}
 .hb{padding:8px 20px;border-radius:24px;font-size:.78rem;font-weight:600;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);transition:all var(--ease);backdrop-filter:blur(4px)}
 .hb:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.1);transform:translateY(-1px)}
 .hb-primary{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.35);color:#fff}
 .hb-primary:hover{background:rgba(255,255,255,.25)}
-.hero-photo .pw{width:170px;height:200px;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.2);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.hero-photo .pw{width:170px;height:200px;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.2);box-shadow:0 20px 60px rgba(0,0,0,.3),0 0 40px rgba(99,102,241,.3);position:relative}
+.hero-photo .pw::before{content:'';position:absolute;inset:-3px;border-radius:18px;background:linear-gradient(135deg,var(--g1),var(--g3),var(--g4));z-index:-1;animation:borderGlow 3s ease infinite}
+@keyframes borderGlow{0%,100%{opacity:.6}50%{opacity:1}}
 .hero-photo .pw img{width:100%;height:100%;object-fit:cover}
 @media(max-width:640px){
   .hero{grid-template-columns:1fr;text-align:center;padding:100px 28px 50px;gap:20px}
@@ -70,7 +76,7 @@ a:hover{color:var(--p2)}
 /* SECTIONS */
 .sect{max-width:var(--max);margin:0 auto;padding:56px 28px}
 .st{font-size:1.2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.st::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent)}
+.st::after{content:'';flex:1;height:2px;background:linear-gradient(90deg,var(--p1),var(--p2),transparent);border-radius:2px}
 
 /* REVEAL ANIMATION */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
@@ -100,8 +106,8 @@ a:hover{color:var(--p2)}
 .paper-title a:hover{color:var(--p1);border-color:var(--p1)}
 .paper-venue{font-size:.76rem;color:var(--ink3);font-style:italic}
 .paper-venue .cite{font-style:normal;color:var(--p1);font-weight:600;margin-left:4px}
-.scholar-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:.82rem;font-weight:600;color:var(--white);background:linear-gradient(135deg,var(--g1),var(--g2));padding:10px 22px;border-radius:24px;transition:all var(--ease);box-shadow:0 4px 16px rgba(79,70,229,.2)}
-.scholar-cta:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(79,70,229,.3);color:#fff}
+.scholar-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:.82rem;font-weight:600;color:var(--white);background:linear-gradient(135deg,var(--g1),var(--g2),var(--g3));background-size:200% 200%;animation:shimmer 3s ease infinite;padding:12px 28px;border-radius:28px;transition:all var(--ease);box-shadow:0 4px 20px rgba(79,70,229,.25)}
+.scholar-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(79,70,229,.35);color:#fff}
 
 /* TIMELINE */
 .tl{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
@@ -156,14 +162,16 @@ footer{max-width:var(--max);margin:0 auto;padding:24px 28px;text-align:center;fo
 
 <!-- HERO -->
 <div class="hero-wrap">
+<div class="hero-dots"></div>
+<div class="hero-glow"></div>
 <div class="hero">
 <div>
-<h1>Muhammad<br>Imran Sharif</h1>
+<h1>Muhammad Imran Sharif</h1>
 <p class="hero-sub">PhD Candidate in Computer Science at Kansas State University. Building deep learning systems for automated visual behavior recognition.</p>
 <div class="hero-nums">
-<div class="hn"><div class="hn-val">30+</div><div class="hn-lbl">Publications</div></div>
-<div class="hn"><div class="hn-val">18</div><div class="hn-lbl">H-Index</div></div>
-<div class="hn"><div class="hn-val">1,823</div><div class="hn-lbl">Citations</div></div>
+<div class="hn"><div class="hn-val" data-count="30">0</div><div class="hn-lbl">Publications</div></div>
+<div class="hn"><div class="hn-val" data-count="18">0</div><div class="hn-lbl">H-Index</div></div>
+<div class="hn"><div class="hn-val" data-count="1823">0</div><div class="hn-lbl">Citations</div></div>
 </div>
 <div class="hero-btns">
 <a href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" class="hb hb-primary" target="_blank">Google Scholar</a>
@@ -278,6 +286,22 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isI
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 // Mobile nav
 document.querySelectorAll('.topbar-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')));
+// Counter animation
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const target=parseInt(el.dataset.count);
+  const suffix=target===30?'+':'';
+  const duration=1800;
+  const start=performance.now();
+  function update(now){
+    const elapsed=now-start;
+    const progress=Math.min(elapsed/duration,1);
+    const eased=1-Math.pow(1-progress,3);
+    const current=Math.floor(eased*target);
+    el.textContent=(current>=1000?current.toLocaleString():current)+suffix;
+    if(progress<1)requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+});
 </script>
 </body>
 </html>
