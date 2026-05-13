@@ -50,12 +50,12 @@ a:hover{color:var(--p2)}
 .hero h1{font-size:2.8rem;font-weight:800;line-height:1.08;letter-spacing:-.04em;color:#fff;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,#c7d2fe 50%,#fbbf24 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:shimmer 4s ease infinite}
 @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .hero-sub{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:480px;line-height:1.65}
-.hero-nums{display:flex;gap:28px;margin-bottom:20px}
+.hero-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:24px;max-width:480px}
 .hn{text-align:left}
 .hn-val{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:#fff;line-height:1;text-shadow:0 0 20px rgba(255,255,255,.3)}
-.hn-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-top:2px}
-.hero-btns{display:flex;gap:8px;flex-wrap:wrap}
-.hb{padding:8px 20px;border-radius:24px;font-size:.78rem;font-weight:600;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);transition:all var(--ease);backdrop-filter:blur(4px)}
+.hn-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-top:4px}
+.hero-btns{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:520px}
+.hb{padding:9px 0;border-radius:24px;font-size:.78rem;font-weight:600;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);transition:all var(--ease);backdrop-filter:blur(4px);text-align:center;display:block}
 .hb:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.1);transform:translateY(-1px)}
 .hb-primary{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.35);color:#fff}
 .hb-primary:hover{background:rgba(255,255,255,.25)}
@@ -67,8 +67,8 @@ a:hover{color:var(--p2)}
   .hero{grid-template-columns:1fr;text-align:center;padding:100px 28px 50px;gap:20px}
   .hero h1{font-size:2rem}
   .hero-sub{margin:0 auto 20px}
-  .hero-nums{justify-content:center}
-  .hero-btns{justify-content:center}
+  .hero-nums{grid-template-columns:repeat(4,1fr);gap:12px;max-width:100%}
+  .hero-btns{grid-template-columns:repeat(3,1fr);max-width:100%}
   .hero-photo{display:flex;justify-content:center}
   .hero-photo .pw{width:130px;height:156px}
 }
