@@ -4,287 +4,280 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muhammad Imran Sharif</title>
-<meta name="description" content="Muhammad Imran Sharif — PhD Candidate, Kansas State University. Deep Learning · Computer Vision · Transformers.">
+<meta name="description" content="Muhammad Imran Sharif — PhD Candidate, Kansas State University. AI Researcher.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#fcfcfa;--white:#fff;--cream:#f7f6f2;--warm:#eae8e1;
-  --ink:#1c1c1c;--ink2:#4a4a4a;--ink3:#8a8a8a;--ink4:#b5b5b5;
-  --blue:#1a56db;--blue2:#1e40af;--teal:#0d7377;--amber:#b45309;
-  --border:#e2e0da;
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'Karla',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
-  --max:860px;--ease:.2s ease;
+  --bg:#fafbff;--white:#fff;
+  --ink:#0f172a;--ink2:#334155;--ink3:#64748b;--ink4:#94a3b8;
+  --p1:#4f46e5;--p2:#7c3aed;--p3:#6366f1;--p4:#818cf8;
+  --g1:#4f46e5;--g2:#7c3aed;--g3:#ec4899;--g4:#f59e0b;
+  --glass:rgba(255,255,255,.7);--glass2:rgba(255,255,255,.5);
+  --border:rgba(99,102,241,.12);--border2:rgba(99,102,241,.2);
+  --shadow:0 4px 24px rgba(79,70,229,.08);--shadow2:0 8px 40px rgba(79,70,229,.12);
+  --max:900px;--ease:.35s cubic-bezier(.4,0,.2,1);
+  --font:'Sora',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
-a{color:var(--blue);text-decoration:none}a:hover{color:var(--blue2)}
-::selection{background:var(--blue);color:#fff}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--p1);text-decoration:none;transition:all var(--ease)}
+a:hover{color:var(--p2)}
+::selection{background:var(--p1);color:#fff}
 
-/* NAV */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(252,252,250,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.topbar-in{max-width:var(--max);margin:0 auto;padding:0 28px;height:48px;display:flex;align-items:center;justify-content:space-between}
-.topbar-name{font-family:var(--serif);font-weight:600;font-size:.9rem;color:var(--ink);letter-spacing:-.01em}
-.topbar-links{display:flex;gap:20px}
-.topbar-links a{font-size:.78rem;color:var(--ink3);font-weight:500;transition:color var(--ease)}
-.topbar-links a:hover{color:var(--ink)}
-.mob-toggle{display:none;background:0;border:0;cursor:pointer}
+/* TOPBAR */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);background:rgba(250,251,255,.75);border-bottom:1px solid var(--border)}
+.topbar-in{max-width:var(--max);margin:0 auto;padding:0 28px;height:50px;display:flex;align-items:center;justify-content:flex-end}
+.topbar-links{display:flex;gap:4px}
+.topbar-links a{font-size:.76rem;font-weight:500;color:var(--ink3);padding:6px 14px;border-radius:20px;transition:all var(--ease)}
+.topbar-links a:hover{color:var(--p1);background:rgba(79,70,229,.06)}
+.mob-btn{display:none;background:0;border:0;cursor:pointer;color:var(--ink3)}
 @media(max-width:640px){
-  .topbar-links{display:none;position:absolute;top:48px;left:0;right:0;flex-direction:column;background:rgba(252,252,250,.98);padding:12px 28px;border-bottom:1px solid var(--border)}
-  .topbar-links.open{display:flex}
-  .mob-toggle{display:block}
+  .topbar-links{display:none;position:absolute;top:50px;left:0;right:0;flex-direction:column;background:rgba(250,251,255,.97);backdrop-filter:blur(20px);padding:8px 20px;border-bottom:1px solid var(--border)}.topbar-links.open{display:flex}.mob-btn{display:block}
 }
 
 /* HERO */
-.hero{max-width:var(--max);margin:0 auto;padding:96px 28px 48px}
-.hero-grid{display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:start}
-.hero-img{width:150px;height:180px;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
-.hero-img img{width:100%;height:100%;object-fit:cover}
-.hero-body h1{font-family:var(--serif);font-size:2.2rem;font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:6px}
-.hero-body .role{font-size:.88rem;color:var(--ink2);margin-bottom:14px}
-.hero-nums{display:flex;gap:28px;margin-bottom:16px}
-.hero-nums .n{text-align:left}
-.hero-nums .n-val{font-family:var(--mono);font-size:1.15rem;font-weight:700;color:var(--teal);line-height:1}
-.hero-nums .n-lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-top:1px}
-.hero-links{display:flex;gap:6px;flex-wrap:wrap}
-.hl-btn{padding:7px 16px;border-radius:8px;font-size:.78rem;font-weight:600;border:1.5px solid var(--border);color:var(--ink2);transition:all var(--ease);display:inline-block}
-.hl-btn:hover{border-color:var(--blue);color:var(--blue)}
-.hl-btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
-.hl-btn.primary:hover{background:var(--blue2)}
+.hero-wrap{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 25%,#4338ca 50%,#6366f1 75%,#818cf8 100%);position:relative;overflow:hidden}
+.hero-wrap::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(236,72,153,.3) 0%,transparent 70%);border-radius:50%;animation:float 8s ease-in-out infinite}
+.hero-wrap::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(245,158,11,.2) 0%,transparent 70%);border-radius:50%;animation:float 10s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px)}}
+.hero{max-width:var(--max);margin:0 auto;padding:120px 28px 70px;position:relative;z-index:1;display:grid;grid-template-columns:1fr 200px;gap:36px;align-items:center}
+.hero h1{font-size:2.6rem;font-weight:800;line-height:1.08;letter-spacing:-.04em;color:#fff;margin-bottom:8px}
+.hero-sub{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:480px;line-height:1.65}
+.hero-nums{display:flex;gap:28px;margin-bottom:20px}
+.hn{text-align:left}
+.hn-val{font-family:var(--mono);font-size:1.4rem;font-weight:700;color:#fff;line-height:1}
+.hn-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-top:2px}
+.hero-btns{display:flex;gap:8px;flex-wrap:wrap}
+.hb{padding:8px 20px;border-radius:24px;font-size:.78rem;font-weight:600;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);transition:all var(--ease);backdrop-filter:blur(4px)}
+.hb:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.1);transform:translateY(-1px)}
+.hb-primary{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.35);color:#fff}
+.hb-primary:hover{background:rgba(255,255,255,.25)}
+.hero-photo .pw{width:170px;height:200px;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.2);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.hero-photo .pw img{width:100%;height:100%;object-fit:cover}
 @media(max-width:640px){
-  .hero-grid{grid-template-columns:1fr;text-align:center;gap:20px}
-  .hero-img{margin:0 auto;width:120px;height:144px}
+  .hero{grid-template-columns:1fr;text-align:center;padding:100px 28px 50px;gap:20px}
+  .hero h1{font-size:2rem}
+  .hero-sub{margin:0 auto 20px}
   .hero-nums{justify-content:center}
-  .hero-links{justify-content:center}
+  .hero-btns{justify-content:center}
+  .hero-photo{display:flex;justify-content:center}
+  .hero-photo .pw{width:130px;height:156px}
 }
 
-/* DIVIDER */
-.divider{max-width:var(--max);margin:0 auto;padding:0 28px}
-.divider hr{border:0;border-top:1px solid var(--border)}
+/* SECTIONS */
+.sect{max-width:var(--max);margin:0 auto;padding:56px 28px}
+.st{font-size:1.2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.st::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent)}
 
-/* SECTION */
-.sect{max-width:var(--max);margin:0 auto;padding:40px 28px}
-.sect-title{font-family:var(--serif);font-size:1.15rem;font-weight:600;margin-bottom:20px;letter-spacing:-.01em;color:var(--ink)}
+/* REVEAL ANIMATION */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
 
 /* ABOUT */
-.about-text{color:var(--ink2);font-size:.92rem;max-width:680px;line-height:1.75}
+.about-text{color:var(--ink2);font-size:.92rem;max-width:700px;line-height:1.8}
 
-/* RESEARCH */
-.res-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.rl-item{padding:16px 18px;background:var(--cream);border-radius:10px;transition:all var(--ease)}
-.rl-item:hover{background:var(--warm)}
-.rl-item h3{font-size:.88rem;font-weight:600;margin-bottom:3px}
-.rl-item p{font-size:.78rem;color:var(--ink2);line-height:1.55}
-@media(max-width:640px){.res-list{grid-template-columns:1fr}}
+/* RESEARCH CARDS */
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rc{background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:14px;padding:22px;transition:all var(--ease);position:relative;overflow:hidden}
+.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));opacity:0;transition:opacity var(--ease)}
+.rc:hover{border-color:var(--border2);box-shadow:var(--shadow2);transform:translateY(-2px)}
+.rc:hover::before{opacity:1}
+.rc h3{font-size:.9rem;font-weight:700;margin-bottom:4px}
+.rc p{font-size:.78rem;color:var(--ink3);line-height:1.55}
+@media(max-width:640px){.res-grid{grid-template-columns:1fr}}
 
-/* PUBLICATIONS — only key papers */
-.paper{padding:16px 0;border-bottom:1px solid var(--border)}
-.paper:last-of-type{border-bottom:none}
-.paper-label{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:4px}
-.paper-title{font-size:.9rem;font-weight:600;line-height:1.5;margin-bottom:3px}
-.paper-venue{font-size:.78rem;color:var(--ink3);font-style:italic}
-.scholar-link{display:inline-block;margin-top:20px;font-size:.85rem;font-weight:600;color:var(--blue);padding:8px 0;border-bottom:1.5px solid var(--blue);transition:all var(--ease)}
-.scholar-link:hover{color:var(--blue2);border-color:var(--blue2)}
+/* PAPERS */
+.paper{padding:20px 22px;background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;transition:all var(--ease);position:relative;overflow:hidden}
+.paper::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--g1),var(--g2));opacity:0;transition:opacity var(--ease)}
+.paper:hover{border-color:var(--border2);box-shadow:var(--shadow);transform:translateY(-1px)}
+.paper:hover::before{opacity:1}
+.paper-label{font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--p1);margin-bottom:5px;font-weight:500}
+.paper-title{font-size:.9rem;font-weight:600;line-height:1.5;margin-bottom:4px}
+.paper-title a{color:var(--ink);border-bottom:1px solid var(--border);transition:all var(--ease)}
+.paper-title a:hover{color:var(--p1);border-color:var(--p1)}
+.paper-venue{font-size:.76rem;color:var(--ink3);font-style:italic}
+.paper-venue .cite{font-style:normal;color:var(--p1);font-weight:600;margin-left:4px}
+.scholar-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:.82rem;font-weight:600;color:var(--white);background:linear-gradient(135deg,var(--g1),var(--g2));padding:10px 22px;border-radius:24px;transition:all var(--ease);box-shadow:0 4px 16px rgba(79,70,229,.2)}
+.scholar-cta:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(79,70,229,.3);color:#fff}
 
 /* TIMELINE */
-.tl-item{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--border)}
-.tl-item:last-child{border-bottom:none}
-.tl-date{font-family:var(--mono);font-size:.72rem;color:var(--ink3);padding-top:2px}
-.tl-title{font-weight:600;font-size:.88rem}
-.tl-sub{font-size:.82rem;color:var(--teal)}
-.tl-desc{font-size:.78rem;color:var(--ink2);line-height:1.6;margin-top:2px}
-@media(max-width:640px){.tl-item{grid-template-columns:1fr;gap:1px}}
+.tl{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+.tl:last-child{border-bottom:none}
+.tl-date{font-family:var(--mono);font-size:.72rem;color:var(--ink4);padding-top:2px}
+.tl-role{font-weight:700;font-size:.88rem;margin-bottom:1px}
+.tl-org{font-size:.82rem;color:var(--p1);font-weight:500}
+.tl-desc{font-size:.78rem;color:var(--ink3);line-height:1.55;margin-top:2px}
+.tl-desc a{color:var(--p1)}
+@media(max-width:640px){.tl{grid-template-columns:1fr;gap:1px}}
 
-/* SKILLS */
-.tags-row{display:flex;flex-wrap:wrap;gap:6px}
-.tag-item{font-size:.78rem;padding:5px 14px;border-radius:20px;background:var(--cream);color:var(--ink2);transition:all var(--ease)}
-.tag-item:hover{background:var(--warm);color:var(--ink)}
+/* TAGS */
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.76rem;padding:6px 16px;border-radius:20px;background:var(--glass);border:1px solid var(--border);color:var(--ink2);transition:all var(--ease)}
+.tag:hover{border-color:var(--p1);color:var(--p1);background:rgba(79,70,229,.04);transform:translateY(-1px)}
 
 /* GALLERY */
-.gal-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.gal-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);transition:all var(--ease);text-decoration:none;color:inherit;display:block}
-.gal-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
-.gal-card img{width:100%;height:150px;object-fit:cover;display:block}
-.gal-card .gc-text{padding:10px;font-size:.72rem;color:var(--ink2);line-height:1.45}
-.gal-card .gc-text strong{display:block;color:var(--ink);font-size:.76rem;margin-bottom:1px}
-@media(max-width:768px){.gal-row{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.gal-row{grid-template-columns:1fr}}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gc{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--white);transition:all var(--ease);text-decoration:none;color:var(--ink);display:block}
+.gc:hover{border-color:var(--border2);box-shadow:var(--shadow2);transform:translateY(-3px);color:var(--ink)}
+.gc img{width:100%;height:160px;object-fit:cover;display:block;transition:transform .5s ease}
+.gc:hover img{transform:scale(1.05)}
+.gc .cap{padding:10px 12px;font-size:.72rem;color:var(--ink3);line-height:1.45}
+.gc .cap strong{display:block;color:var(--ink);font-size:.76rem;margin-bottom:1px}
+@media(max-width:768px){.gal{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.gal{grid-template-columns:1fr}}
 
 /* CONTACT */
-.ct-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.ct-card{padding:14px;background:var(--cream);border-radius:10px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);transition:all var(--ease)}
-.ct-card:hover{background:var(--warm);transform:translateY(-1px);color:var(--ink)}
-.ct-icon{font-size:.9rem;width:30px;text-align:center;flex-shrink:0}
-.ct-lbl{font-size:.65rem;color:var(--ink3)}.ct-val{font-weight:600;font-size:.78rem}
-@media(max-width:640px){.ct-row{grid-template-columns:1fr 1fr}}
-@media(max-width:400px){.ct-row{grid-template-columns:1fr}}
+.ct-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ct{background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);transition:all var(--ease)}
+.ct:hover{border-color:var(--border2);box-shadow:var(--shadow);transform:translateY(-2px);color:var(--ink)}
+.ct-i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,rgba(79,70,229,.08),rgba(124,58,237,.08));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.85rem}
+.ct-l{font-size:.65rem;color:var(--ink4)}.ct-v{font-weight:600;font-size:.78rem}
+@media(max-width:640px){.ct-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:400px){.ct-grid{grid-template-columns:1fr}}
 
-footer{max-width:var(--max);margin:0 auto;padding:28px;text-align:center;font-size:.7rem;color:var(--ink4);border-top:1px solid var(--border)}
+/* AWARDS */
+.aw{display:flex;gap:8px;align-items:baseline;padding:6px 0;font-size:.86rem}
+.aw-i{color:var(--g4)}
+.aw strong{font-weight:700}
+.aw-s{color:var(--ink3);font-size:.78rem}
+
+footer{max-width:var(--max);margin:0 auto;padding:24px 28px;text-align:center;font-size:.7rem;color:var(--ink4);border-top:1px solid var(--border)}
 </style>
 </head>
 <body>
 
 <div class="topbar"><div class="topbar-in">
-<div class="topbar-name"></div>
-<div class="topbar-links" id="nl">
-<a href="#about">About</a><a href="#research">Research</a><a href="#papers">Papers</a><a href="#experience">Experience</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
-</div>
-<button class="mob-toggle" onclick="document.getElementById('nl').classList.toggle('open')" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+<div class="topbar-links" id="nl"><a href="#about">About</a><a href="#research">Research</a><a href="#papers">Papers</a><a href="#experience">Experience</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+<button class="mob-btn" onclick="document.getElementById('nl').classList.toggle('open')" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
 </div></div>
 
 <!-- HERO -->
+<div class="hero-wrap">
 <div class="hero">
-<div class="hero-grid">
-<div class="hero-img"><img src="image.png" alt="Muhammad Imran Sharif"></div>
-<div class="hero-body">
-<h1>Muhammad Imran Sharif</h1>
-<div class="role">PhD Candidate in Computer Science, Kansas State University</div>
-<div class="hero-nums" style="gap:32px">
-<div class="n"><div class="n-val">30+</div><div class="n-lbl">Publications</div></div>
-<div class="n"><div class="n-val">18</div><div class="n-lbl">H-Index</div></div>
-<div class="n"><div class="n-val">1,823</div><div class="n-lbl">Citations</div></div>
+<div>
+<h1>Muhammad<br>Imran Sharif</h1>
+<p class="hero-sub">PhD Candidate in Computer Science at Kansas State University. Building deep learning systems for automated visual behavior recognition.</p>
+<div class="hero-nums">
+<div class="hn"><div class="hn-val">30+</div><div class="hn-lbl">Publications</div></div>
+<div class="hn"><div class="hn-val">18</div><div class="hn-lbl">H-Index</div></div>
+<div class="hn"><div class="hn-val">1,823</div><div class="hn-lbl">Citations</div></div>
 </div>
-<div class="hero-links">
-<a href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" class="hl-btn primary" target="_blank">Google Scholar</a>
-<a href="https://github.com/imransharif1996" class="hl-btn" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/imransharif1996/" class="hl-btn" target="_blank">LinkedIn</a>
-<a href="https://orcid.org/0000-0002-4786-6579" class="hl-btn" target="_blank">ORCID</a>
-<a href="mailto:imransharif@ksu.edu" class="hl-btn">Email</a>
+<div class="hero-btns">
+<a href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" class="hb hb-primary" target="_blank">Google Scholar</a>
+<a href="https://github.com/imransharif1996" class="hb" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/imransharif1996/" class="hb" target="_blank">LinkedIn</a>
+<a href="https://orcid.org/0000-0002-4786-6579" class="hb" target="_blank">ORCID</a>
+<a href="mailto:imransharif@ksu.edu" class="hb">Email</a>
 </div>
 </div>
+<div class="hero-photo"><div class="pw"><img src="image.png" alt="Muhammad Imran Sharif"></div></div>
 </div>
 </div>
-
-<div class="divider"><hr></div>
 
 <!-- ABOUT -->
-<div class="sect" id="about">
-<div class="sect-title">About</div>
-<div class="about-text">
-I am a fourth-year PhD candidate at Kansas State University, advised by Dr. Doina Caragea. My dissertation focuses on transformer-based deep learning for automated rodent social behavior recognition, developing multi-stream architectures with cross-stream attention and adaptive fusion mechanisms. My broader research spans computer vision, multimodal learning, medical imaging, and agricultural AI.
+<div class="sect" id="about"><div class="st reveal">About</div>
+<div class="about-text reveal">I am a fourth-year PhD candidate at Kansas State University, advised by Dr. Doina Caragea. My dissertation focuses on transformer-based deep learning for automated rodent social behavior recognition, developing multi-stream architectures with cross-stream attention and adaptive fusion mechanisms. My broader research spans computer vision, multimodal learning, medical imaging, and agricultural AI.</div>
 </div>
-</div>
-
-<div class="divider"><hr></div>
 
 <!-- RESEARCH -->
-<div class="sect" id="research">
-<div class="sect-title">Research Areas</div>
-<div class="res-list">
-<div class="rl-item"><h3>Computer Vision</h3><p>Image and video understanding, object detection, segmentation, and visual recognition systems.</p></div>
-<div class="rl-item"><h3>Deep Learning</h3><p>Neural network architectures, representation learning, feature fusion, and model optimization.</p></div>
-<div class="rl-item"><h3>Medical Imaging</h3><p>Clinical image analysis, multimodal classification, distributed learning, and decision support systems.</p></div>
-<div class="rl-item"><h3>Agricultural AI</h3><p>Crop health monitoring, disease detection, pest identification, and precision agriculture systems.</p></div>
-</div>
-</div>
-
-<div class="divider"><hr></div>
+<div class="sect" id="research"><div class="st reveal">Research Areas</div>
+<div class="res-grid">
+<div class="rc reveal"><h3>Computer Vision</h3><p>Image and video understanding, object detection, segmentation, and visual recognition systems.</p></div>
+<div class="rc reveal"><h3>Deep Learning</h3><p>Neural network architectures, representation learning, feature fusion, and model optimization.</p></div>
+<div class="rc reveal"><h3>Medical Imaging</h3><p>Clinical image analysis, multimodal classification, distributed learning, and decision support systems.</p></div>
+<div class="rc reveal"><h3>Agricultural AI</h3><p>Crop health monitoring, disease detection, pest identification, and precision agriculture systems.</p></div>
+</div></div>
 
 <!-- KEY PUBLICATIONS -->
-<div class="sect" id="papers">
-<div class="sect-title">Key Publications</div>
+<div class="sect" id="papers"><div class="st reveal">Key Publications</div>
 
-<div class="paper">
+<div class="paper reveal">
 <div class="paper-label">PhD Research</div>
-<div class="paper-title"><a href="https://arxiv.org/abs/2604.07578" target="_blank" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border)">MSGL-Transformer: A Multi-Scale Global-Local Transformer for Rodent Social Behavior Recognition</a></div>
+<div class="paper-title"><a href="https://arxiv.org/abs/2604.07578" target="_blank">MSGL-Transformer: A Multi-Scale Global-Local Transformer for Rodent Social Behavior Recognition</a></div>
 <div class="paper-venue">M. I. Sharif, D. Caragea — arXiv:2604.07578, under review at Scientific Reports</div>
 </div>
 
-<div class="paper">
+<div class="paper reveal">
 <div class="paper-label">PhD Research</div>
-<div class="paper-title"><a href="https://doi.org/10.3390/ai6100264" target="_blank" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border)">Rodent Social Behavior Recognition using a Global Context-Aware Vision Transformer Network</a></div>
-<div class="paper-venue">M. I. Sharif, D. Caragea, A. Iqbal — AI, vol. 6, no. 10, 2025 · <span style="font-style:normal;color:var(--teal);font-weight:600">1 citation</span></div>
+<div class="paper-title"><a href="https://doi.org/10.3390/ai6100264" target="_blank">Rodent Social Behavior Recognition using a Global Context-Aware Vision Transformer Network</a></div>
+<div class="paper-venue">M. I. Sharif, D. Caragea, A. Iqbal — AI, vol. 6, no. 10, 2025 ·<span class="cite">1 citation</span></div>
 </div>
 
-<div class="paper">
+<div class="paper reveal">
 <div class="paper-label">MS Thesis</div>
-<div class="paper-title"><a href="https://link.springer.com/article/10.1007/s40747-021-00321-0" target="_blank" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border)">A Decision Support System for Multimodal Brain Tumor Classification using Deep Learning</a></div>
-<div class="paper-venue">M. I. Sharif, M. A. Khan, M. Alhussein, K. Aurangzeb, M. Raza — Complex &amp; Intelligent Systems, vol. 7, 2021 · <span style="font-style:normal;color:var(--teal);font-weight:600">375 citations</span></div>
+<div class="paper-title"><a href="https://link.springer.com/article/10.1007/s40747-021-00321-0" target="_blank">A Decision Support System for Multimodal Brain Tumor Classification using Deep Learning</a></div>
+<div class="paper-venue">M. I. Sharif, M. A. Khan, M. Alhussein, K. Aurangzeb, M. Raza — Complex &amp; Intelligent Systems, vol. 7, 2021 ·<span class="cite">375 citations</span></div>
 </div>
 
-<div class="paper">
+<div class="paper reveal">
 <div class="paper-label">BS Project</div>
-<div class="paper-title"><a href="https://www.mdpi.com/2079-9292/11/3/334" target="_blank" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border)">Deep Learning and Kurtosis-Controlled, Entropy-based Framework for Human Gait Recognition</a></div>
-<div class="paper-venue">M. I. Sharif, M. A. Khan et al. — Electronics, vol. 11, no. 3, 2022 · <span style="font-style:normal;color:var(--teal);font-weight:600">41 citations</span></div>
+<div class="paper-title"><a href="https://www.mdpi.com/2079-9292/11/3/334" target="_blank">Deep Learning and Kurtosis-Controlled, Entropy-based Framework for Human Gait Recognition</a></div>
+<div class="paper-venue">M. I. Sharif, M. A. Khan et al. — Electronics, vol. 11, no. 3, 2022 ·<span class="cite">41 citations</span></div>
 </div>
 
-<a href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" class="scholar-link" target="_blank">View remaining publications on Google Scholar →</a>
+<a href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" class="scholar-cta reveal" target="_blank">View remaining publications on Google Scholar →</a>
 </div>
-
-<div class="divider"><hr></div>
 
 <!-- EXPERIENCE -->
-<div class="sect" id="experience">
-<div class="sect-title">Experience</div>
-<div class="tl-item"><div class="tl-date">2023 — Now</div><div><div class="tl-title">Graduate Research &amp; Teaching Assistant</div><div class="tl-sub">Kansas State University</div><div class="tl-desc">PhD research on transformer-based video analysis for rodent behavior. TA for CIS-200. Courses: CC 750, CC 730, CC 710.</div></div></div>
-<div class="tl-item"><div class="tl-date">2022</div><div><div class="tl-title">Faculty Lecturer</div><div class="tl-sub">University of Wah, Pakistan</div><div class="tl-desc">Taught Computer Fundamentals, Digital Logic Design, Database Lab, Machine Learning.</div></div></div>
-<div class="tl-item"><div class="tl-date">2019 — 2022</div><div><div class="tl-title">IT Specialist (Remote)</div><div class="tl-sub">Caiman Haiti Foundation, Bronx, NY</div><div class="tl-desc">Web development, SEO, and digital platform management.</div></div></div>
+<div class="sect" id="experience"><div class="st reveal">Experience</div>
+<div class="tl reveal"><div class="tl-date">2023 — Now</div><div><div class="tl-role">Graduate Research &amp; Teaching Assistant</div><div class="tl-org">Kansas State University</div><div class="tl-desc">PhD research on transformer-based video analysis for rodent behavior. TA for CIS-200. Courses: CC 750, CC 730, CC 710.</div></div></div>
+<div class="tl reveal"><div class="tl-date">2022</div><div><div class="tl-role">Faculty Lecturer</div><div class="tl-org">University of Wah, Pakistan</div><div class="tl-desc">Taught Computer Fundamentals, Digital Logic Design, Database Lab, Machine Learning.</div></div></div>
+<div class="tl reveal"><div class="tl-date">2019 — 2022</div><div><div class="tl-role">IT Specialist (Remote)</div><div class="tl-org">Caiman Haiti Foundation, Bronx, NY</div><div class="tl-desc">Web development, SEO, and digital platform management.</div></div></div>
 </div>
-
-<div class="divider"><hr></div>
 
 <!-- EDUCATION -->
-<div class="sect">
-<div class="sect-title">Education</div>
-<div class="tl-item"><div class="tl-date">2023 — Now</div><div><div class="tl-title">PhD in Computer Science</div><div class="tl-sub">Kansas State University, Manhattan, Kansas, USA · 3.87/4.00</div><div class="tl-desc">Advisor: <a href="https://www.cs.ksu.edu/about/people/faculty/caragea/" target="_blank">Dr. Doina Caragea</a></div></div></div>
-<div class="tl-item"><div class="tl-date">2019 — 2021</div><div><div class="tl-title">MS in Computer Science</div><div class="tl-sub">COMSATS University Islamabad (Wah Campus), Pakistan · 3.94/4.00</div><div class="tl-desc">Advisor: <a href="https://sites.google.com/site/mudassarr" target="_blank">Dr. Mudassar Raza</a></div></div></div>
-<div class="tl-item"><div class="tl-date">2015 — 2019</div><div><div class="tl-title">BS in Computer Science</div><div class="tl-sub">COMSATS University Islamabad (Wah Campus), Pakistan · 3.27/4.00</div><div class="tl-desc">Advisor: <a href="https://scholar.google.com/citations?user=4_i4ni4AAAAJ&hl=en" target="_blank">Dr. Muhammad Attique Khan</a></div></div></div>
+<div class="sect"><div class="st reveal">Education</div>
+<div class="tl reveal"><div class="tl-date">2023 — Now</div><div><div class="tl-role">PhD in Computer Science</div><div class="tl-org">Kansas State University, Manhattan, Kansas, USA · 3.87/4.00</div><div class="tl-desc">Advisor: <a href="https://www.cs.ksu.edu/about/people/faculty/caragea/" target="_blank">Dr. Doina Caragea</a></div></div></div>
+<div class="tl reveal"><div class="tl-date">2019 — 2021</div><div><div class="tl-role">MS in Computer Science</div><div class="tl-org">COMSATS University Islamabad (Wah Campus), Pakistan · 3.94/4.00</div><div class="tl-desc">Advisor: <a href="https://sites.google.com/site/mudassarr" target="_blank">Dr. Mudassar Raza</a></div></div></div>
+<div class="tl reveal"><div class="tl-date">2015 — 2019</div><div><div class="tl-role">BS in Computer Science</div><div class="tl-org">COMSATS University Islamabad (Wah Campus), Pakistan · 3.27/4.00</div><div class="tl-desc">Advisor: <a href="https://scholar.google.com/citations?user=4_i4ni4AAAAJ&hl=en" target="_blank">Dr. Muhammad Attique Khan</a></div></div></div>
 </div>
 
-<div class="divider"><hr></div>
-
-<!-- SKILLS + REVIEWER -->
-<div class="sect">
-<div class="sect-title">Skills</div>
-<div class="tags-row" style="margin-bottom:24px">
-<span class="tag-item">Python</span><span class="tag-item">PyTorch</span><span class="tag-item">TensorFlow</span><span class="tag-item">OpenCV</span><span class="tag-item">MATLAB</span><span class="tag-item">C++</span><span class="tag-item">Java</span><span class="tag-item">Git</span><span class="tag-item">SLURM / HPC</span><span class="tag-item">Linux</span><span class="tag-item">LaTeX</span><span class="tag-item">Docker</span><span class="tag-item">scikit-learn</span>
+<!-- SKILLS + REVIEWER + AWARDS -->
+<div class="sect"><div class="st reveal">Skills</div>
+<div class="tags reveal" style="margin-bottom:28px">
+<span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">MATLAB</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">Git</span><span class="tag">SLURM / HPC</span><span class="tag">Linux</span><span class="tag">LaTeX</span><span class="tag">Docker</span><span class="tag">scikit-learn</span>
 </div>
-
-<div class="sect-title">Reviewer</div>
-<div class="tags-row" style="margin-bottom:24px">
-<span class="tag-item">IEEE Trans. Artificial Intelligence</span><span class="tag-item">IEEE Trans. Image Processing</span><span class="tag-item">IEEE Trans. Computational Imaging</span><span class="tag-item">IEEE Access</span><span class="tag-item">Pattern Recognition Letters</span><span class="tag-item">SN Computer Science</span><span class="tag-item">Artificial Intelligence Review</span>
+<div class="st reveal">Reviewer</div>
+<div class="tags reveal" style="margin-bottom:28px">
+<span class="tag">IEEE Trans. Artificial Intelligence</span><span class="tag">IEEE Trans. Image Processing</span><span class="tag">IEEE Trans. Computational Imaging</span><span class="tag">IEEE Access</span><span class="tag">Pattern Recognition Letters</span><span class="tag">SN Computer Science</span><span class="tag">Artificial Intelligence Review</span>
 </div>
-
-<div class="sect-title">Awards</div>
-<div style="font-size:.88rem;color:var(--ink2);line-height:1.8">
-<strong>Exceptional PhD Candidate Fellowship</strong> — Kansas State University, 2023<br>
-<strong>Nebraska Engineering Recruitment Fellowship</strong> — University of Nebraska, 2023
-</div>
-</div>
-
-<div class="divider"><hr></div>
+<div class="st reveal">Awards</div>
+<div class="reveal">
+<div class="aw"><span class="aw-i">★</span><div><strong>Exceptional PhD Candidate Fellowship</strong> <span class="aw-s">— Kansas State University, 2023</span></div></div>
+<div class="aw"><span class="aw-i">★</span><div><strong>Nebraska Engineering Recruitment Fellowship</strong> <span class="aw-s">— University of Nebraska, 2023</span></div></div>
+</div></div>
 
 <!-- GALLERY -->
-<div class="sect" id="gallery">
-<div class="sect-title">Gallery</div>
-<div class="gal-row">
-<a class="gal-card" href="Poster%20Presentation%202025.jpeg" target="_blank"><img src="Poster%20Presentation%202025.jpeg" alt="CNAP 2025"><div class="gc-text"><strong>CNAP Poster Presentation 2025</strong>CNAP Site Visit — Poster Session, Kansas State University, Department of Psychological Sciences. Presented research on rodent behavior recognition.</div></a>
-<a class="gal-card" href="RootsofResearchTree2025.jpeg" target="_blank"><img src="RootsofResearchTree2025.jpeg" alt="Research Tree"><div class="gc-text"><strong>Roots of Research Tree Event</strong>April 21, 2025 — Honoring Professor Doina Caragea. Location: Southeast side of Engineering/Durland Hall, Kansas State University.</div></a>
-<a class="gal-card" href="Profs-Doina-House-Party.jpg" target="_blank"><img src="Profs-Doina-House-Party.jpg" alt="Lab Party"><div class="gc-text"><strong>Lab Celebration</strong>Great way to end the semester (Spring 2024) on May 5th with a party at Professor Doina Caragea's house with lab friends.</div></a>
-<a class="gal-card" href="PosterPresentation2023.png" target="_blank"><img src="PosterPresentation2023.png" alt="AI Symposium"><div class="gc-text"><strong>Poster Presentation at AI Symposium</strong>October 16, 2023 — AI Symposium Poster Session at Hale Library, Kansas State University.</div></a>
-</div>
-</div>
-
-<div class="divider"><hr></div>
+<div class="sect" id="gallery"><div class="st reveal">Gallery</div>
+<div class="gal">
+<a class="gc reveal" href="Poster%20Presentation%202025.jpeg" target="_blank"><img src="Poster%20Presentation%202025.jpeg" alt="CNAP 2025"><div class="cap"><strong>CNAP Poster Presentation 2025</strong>CNAP Site Visit — Poster Session, Kansas State University, Department of Psychological Sciences. Presented research on rodent behavior recognition.</div></a>
+<a class="gc reveal" href="RootsofResearchTree2025.jpeg" target="_blank"><img src="RootsofResearchTree2025.jpeg" alt="Research Tree"><div class="cap"><strong>Roots of Research Tree Event</strong>April 21, 2025 — Honoring Professor Doina Caragea. Location: Southeast side of Engineering/Durland Hall, Kansas State University.</div></a>
+<a class="gc reveal" href="Profs-Doina-House-Party.jpg" target="_blank"><img src="Profs-Doina-House-Party.jpg" alt="Lab Party"><div class="cap"><strong>Lab Celebration</strong>Great way to end the semester (Spring 2024) on May 5th with a party at Professor Doina Caragea's house with lab friends.</div></a>
+<a class="gc reveal" href="PosterPresentation2023.png" target="_blank"><img src="PosterPresentation2023.png" alt="AI Symposium"><div class="cap"><strong>Poster Presentation at AI Symposium</strong>October 16, 2023 — AI Symposium Poster Session at Hale Library, Kansas State University.</div></a>
+</div></div>
 
 <!-- CONTACT -->
-<div class="sect" id="contact">
-<div class="sect-title">Contact</div>
-<div class="ct-row">
-<a class="ct-card" href="mailto:imransharif@ksu.edu"><div class="ct-icon">✉</div><div><div class="ct-lbl">Email</div><div class="ct-val">imransharif@ksu.edu</div></div></a>
-<a class="ct-card" href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" target="_blank"><div class="ct-icon">📖</div><div><div class="ct-lbl">Google Scholar</div><div class="ct-val">View Profile</div></div></a>
-<a class="ct-card" href="https://github.com/imransharif1996" target="_blank"><div class="ct-icon">⌨</div><div><div class="ct-lbl">GitHub</div><div class="ct-val">imransharif1996</div></div></a>
-<a class="ct-card" href="https://www.linkedin.com/in/imransharif1996/" target="_blank"><div class="ct-icon">🔗</div><div><div class="ct-lbl">LinkedIn</div><div class="ct-val">imransharif1996</div></div></a>
-<a class="ct-card" href="https://orcid.org/0000-0002-4786-6579" target="_blank"><div class="ct-icon">🆔</div><div><div class="ct-lbl">ORCID</div><div class="ct-val">0000-0002-4786-6579</div></div></a>
-<a class="ct-card" href="https://www.scopus.com/authid/detail.uri?authorId=58825670100" target="_blank"><div class="ct-icon">🔍</div><div><div class="ct-lbl">Scopus</div><div class="ct-val">View Profile</div></div></a>
-</div>
-</div>
+<div class="sect" id="contact"><div class="st reveal">Contact</div>
+<div class="ct-grid reveal">
+<a class="ct" href="mailto:imransharif@ksu.edu"><div class="ct-i">✉</div><div><div class="ct-l">Email</div><div class="ct-v">imransharif@ksu.edu</div></div></a>
+<a class="ct" href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" target="_blank"><div class="ct-i">📖</div><div><div class="ct-l">Google Scholar</div><div class="ct-v">View Profile</div></div></a>
+<a class="ct" href="https://github.com/imransharif1996" target="_blank"><div class="ct-i">⌨</div><div><div class="ct-l">GitHub</div><div class="ct-v">imransharif1996</div></div></a>
+<a class="ct" href="https://www.linkedin.com/in/imransharif1996/" target="_blank"><div class="ct-i">🔗</div><div><div class="ct-l">LinkedIn</div><div class="ct-v">imransharif1996</div></div></a>
+<a class="ct" href="https://orcid.org/0000-0002-4786-6579" target="_blank"><div class="ct-i">🆔</div><div><div class="ct-l">ORCID</div><div class="ct-v">0000-0002-4786-6579</div></div></a>
+<a class="ct" href="https://www.scopus.com/authid/detail.uri?authorId=58825670100" target="_blank"><div class="ct-i">🔍</div><div><div class="ct-l">Scopus</div><div class="ct-v">View Profile</div></div></a>
+</div></div>
 
 <footer>© 2026 Muhammad Imran Sharif · Kansas State University · Manhattan, KS</footer>
-<script>document.querySelectorAll('.topbar-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')))</script>
+
+<script>
+// Scroll reveal
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+// Mobile nav
+document.querySelectorAll('.topbar-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')));
+</script>
 </body>
 </html>
