@@ -298,7 +298,7 @@ document.querySelectorAll('[data-count]').forEach(el=>{
     const progress=Math.min(elapsed/duration,1);
     const eased=1-Math.pow(1-progress,3);
     const current=Math.floor(eased*target);
-    el.textContent=(current>=1000?current.toLocaleString():current)+suffix;
+    el.textContent=(current>=10000?current.toLocaleString():current)+suffix;
     if(progress<1)requestAnimationFrame(update);
   }
   requestAnimationFrame(update);
