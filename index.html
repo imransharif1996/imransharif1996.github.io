@@ -106,7 +106,7 @@ a{color:var(--blue);text-decoration:none}a:hover{color:var(--blue2)}
 
 /* GALLERY */
 .gal-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.gal-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);transition:all var(--ease)}
+.gal-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);transition:all var(--ease);text-decoration:none;color:inherit;display:block}
 .gal-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
 .gal-card img{width:100%;height:150px;object-fit:cover;display:block}
 .gal-card .gc-text{padding:10px;font-size:.72rem;color:var(--ink2);line-height:1.45}
@@ -129,7 +129,7 @@ footer{max-width:var(--max);margin:0 auto;padding:28px;text-align:center;font-si
 <body>
 
 <div class="topbar"><div class="topbar-in">
-<div class="topbar-name">M. Imran Sharif</div>
+<div class="topbar-name"></div>
 <div class="topbar-links" id="nl">
 <a href="#about">About</a><a href="#research">Research</a><a href="#papers">Papers</a><a href="#experience">Experience</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
 </div>
@@ -143,7 +143,7 @@ footer{max-width:var(--max);margin:0 auto;padding:28px;text-align:center;font-si
 <div class="hero-body">
 <h1>Muhammad Imran Sharif</h1>
 <div class="role">PhD Candidate in Computer Science, Kansas State University</div>
-<div class="hero-nums">
+<div class="hero-nums" style="gap:32px">
 <div class="n"><div class="n-val">30+</div><div class="n-lbl">Publications</div></div>
 <div class="n"><div class="n-val">18</div><div class="n-lbl">H-Index</div></div>
 <div class="n"><div class="n-val">1,823</div><div class="n-lbl">Citations</div></div>
@@ -175,10 +175,10 @@ I am a fourth-year PhD candidate at Kansas State University, advised by Dr. Doin
 <div class="sect" id="research">
 <div class="sect-title">Research Areas</div>
 <div class="res-list">
-<div class="rl-item"><h3>Computer Vision</h3><p>Vision transformers, video understanding, segmentation, and visual feature analysis.</p></div>
-<div class="rl-item"><h3>Deep Learning</h3><p>Transformer architectures, attention mechanisms, multi-stream fusion strategies.</p></div>
-<div class="rl-item"><h3>Medical Imaging</h3><p>Clinical image analysis, multimodal classification, federated learning, and decision support systems.</p></div>
-<div class="rl-item"><h3>Agricultural AI</h3><p>Crop disease detection, pest localization, UAV-based precision agriculture.</p></div>
+<div class="rl-item"><h3>Computer Vision</h3><p>Image and video understanding, object detection, segmentation, and visual recognition systems.</p></div>
+<div class="rl-item"><h3>Deep Learning</h3><p>Neural network architectures, representation learning, feature fusion, and model optimization.</p></div>
+<div class="rl-item"><h3>Medical Imaging</h3><p>Clinical image analysis, multimodal classification, distributed learning, and decision support systems.</p></div>
+<div class="rl-item"><h3>Agricultural AI</h3><p>Crop health monitoring, disease detection, pest identification, and precision agriculture systems.</p></div>
 </div>
 </div>
 
@@ -230,9 +230,9 @@ I am a fourth-year PhD candidate at Kansas State University, advised by Dr. Doin
 <!-- EDUCATION -->
 <div class="sect">
 <div class="sect-title">Education</div>
-<div class="tl-item"><div class="tl-date">2023 — Now</div><div><div class="tl-title">PhD in Computer Science</div><div class="tl-sub">Kansas State University · 3.87/4.00</div><div class="tl-desc">Advisor: <a href="https://www.cs.ksu.edu/about/people/faculty/caragea/" target="_blank">Dr. Doina Caragea</a></div></div></div>
-<div class="tl-item"><div class="tl-date">2019 — 2021</div><div><div class="tl-title">MS in Computer Science</div><div class="tl-sub">COMSATS University Islamabad · 3.94/4.00</div><div class="tl-desc">Advisor: <a href="https://sites.google.com/site/mudassarr" target="_blank">Dr. Mudassar Raza</a></div></div></div>
-<div class="tl-item"><div class="tl-date">2015 — 2019</div><div><div class="tl-title">BS in Computer Science</div><div class="tl-sub">COMSATS University Islamabad · 3.27/4.00</div><div class="tl-desc">Advisor: <a href="https://scholar.google.com/citations?user=4_i4ni4AAAAJ&hl=en" target="_blank">Dr. Muhammad Attique Khan</a></div></div></div>
+<div class="tl-item"><div class="tl-date">2023 — Now</div><div><div class="tl-title">PhD in Computer Science</div><div class="tl-sub">Kansas State University, Manhattan, Kansas, USA · 3.87/4.00</div><div class="tl-desc">Advisor: <a href="https://www.cs.ksu.edu/about/people/faculty/caragea/" target="_blank">Dr. Doina Caragea</a></div></div></div>
+<div class="tl-item"><div class="tl-date">2019 — 2021</div><div><div class="tl-title">MS in Computer Science</div><div class="tl-sub">COMSATS University Islamabad (Wah Campus), Pakistan · 3.94/4.00</div><div class="tl-desc">Advisor: <a href="https://sites.google.com/site/mudassarr" target="_blank">Dr. Mudassar Raza</a></div></div></div>
+<div class="tl-item"><div class="tl-date">2015 — 2019</div><div><div class="tl-title">BS in Computer Science</div><div class="tl-sub">COMSATS University Islamabad (Wah Campus), Pakistan · 3.27/4.00</div><div class="tl-desc">Advisor: <a href="https://scholar.google.com/citations?user=4_i4ni4AAAAJ&hl=en" target="_blank">Dr. Muhammad Attique Khan</a></div></div></div>
 </div>
 
 <div class="divider"><hr></div>
@@ -262,10 +262,10 @@ I am a fourth-year PhD candidate at Kansas State University, advised by Dr. Doin
 <div class="sect" id="gallery">
 <div class="sect-title">Gallery</div>
 <div class="gal-row">
-<div class="gal-card"><img src="Poster%20Presentation%202025.jpeg" alt="CNAP 2025"><div class="gc-text"><strong>CNAP Poster 2025</strong>Site Visit, KSU Psychological Sciences.</div></div>
-<div class="gal-card"><img src="RootsofResearchTree2025.jpeg" alt="Research Tree"><div class="gc-text"><strong>Roots of Research Tree</strong>April 2025, honoring Prof. Caragea.</div></div>
-<div class="gal-card"><img src="Profs-Doina-House-Party.jpg" alt="Lab Party"><div class="gc-text"><strong>Lab Celebration</strong>Spring 2024 at Prof. Caragea's.</div></div>
-<div class="gal-card"><img src="PosterPresentation2023.png" alt="AI Symposium"><div class="gc-text"><strong>AI Symposium 2023</strong>Hale Library, KSU.</div></div>
+<a class="gal-card" href="Poster%20Presentation%202025.jpeg" target="_blank"><img src="Poster%20Presentation%202025.jpeg" alt="CNAP 2025"><div class="gc-text"><strong>CNAP Poster Presentation 2025</strong>CNAP Site Visit — Poster Session, Kansas State University, Department of Psychological Sciences. Presented research on rodent behavior recognition.</div></a>
+<a class="gal-card" href="RootsofResearchTree2025.jpeg" target="_blank"><img src="RootsofResearchTree2025.jpeg" alt="Research Tree"><div class="gc-text"><strong>Roots of Research Tree Event</strong>April 21, 2025 — Honoring Professor Doina Caragea. Location: Southeast side of Engineering/Durland Hall, Kansas State University.</div></a>
+<a class="gal-card" href="Profs-Doina-House-Party.jpg" target="_blank"><img src="Profs-Doina-House-Party.jpg" alt="Lab Party"><div class="gc-text"><strong>Lab Celebration</strong>Great way to end the semester (Spring 2024) on May 5th with a party at Professor Doina Caragea's house with lab friends.</div></a>
+<a class="gal-card" href="PosterPresentation2023.png" target="_blank"><img src="PosterPresentation2023.png" alt="AI Symposium"><div class="gc-text"><strong>Poster Presentation at AI Symposium</strong>October 16, 2023 — AI Symposium Poster Session at Hale Library, Kansas State University.</div></a>
 </div>
 </div>
 
