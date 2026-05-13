@@ -1,116 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Muhammad Imran Sharif</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-            color: white;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
-        nav a:hover {
-            background: #575757;
-        }
-        .profile-section {
-            display: flex;
-            align-items: center;
-            background: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .profile-img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-        .profile-details {
-            flex: 1;
-        }
-        .profile-details h2 {
-            margin: 0;
-        }
-        .contact-info {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0;
-        }
-        .contact-info li {
-            margin: 5px 0;
-        }
-        .contact-info a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Imran Sharif — AI Researcher</title>
+<meta name="description" content="Muhammad Imran Sharif — PhD Candidate in Computer Science at Kansas State University. Deep Learning, Computer Vision, Transformer Architectures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--bg4:#222;--text:#e8e8e8;--text2:#999;--text3:#666;--accent:#4f9cf7;--accent2:#6cb4ff;--accent-glow:rgba(79,156,247,.12);--green:#34d399;--gold:#f59e0b;--purple:#a78bfa;--border:#2a2a2a;--border2:#333;--max:1080px;--ease:.3s cubic-bezier(.4,0,.2,1);--font:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',monospace}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color var(--ease)}a:hover{color:var(--accent2)}
+::selection{background:var(--accent);color:#fff}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-logo{font-weight:700;font-size:.95rem;color:var(--text);letter-spacing:-.02em}.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:4px}.nav-links a{font-size:.8rem;font-weight:500;color:var(--text2);padding:6px 12px;border-radius:6px;transition:all var(--ease)}.nav-links a:hover{color:var(--text);background:var(--bg3)}
+.ham{display:none;background:0;border:0;cursor:pointer;color:var(--text2)}
+@media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:52px;left:0;right:0;background:rgba(10,10,10,.95);backdrop-filter:blur(20px);padding:8px 16px;border-bottom:1px solid var(--border)}.nav-links.open{display:flex}.ham{display:block}}
+.hero{max-width:var(--max);margin:0 auto;padding:100px 24px 60px;display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center}
+.hero-text h1{font-size:2.8rem;font-weight:800;line-height:1.1;letter-spacing:-.04em;margin-bottom:8px}
+.hero-text h1 .hl{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1rem;color:var(--text2);margin-bottom:20px;max-width:520px}
+.hero-meta{display:flex;gap:24px;margin-bottom:24px;flex-wrap:wrap}
+.hm-item{text-align:left}.hm-num{font-size:1.6rem;font-weight:800;font-family:var(--mono);color:var(--accent);line-height:1}.hm-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-top:2px}
+.hero-btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:8px;font-size:.82rem;font-weight:600;transition:all var(--ease);border:1px solid var(--border2);color:var(--text2)}
+.btn-fill{background:var(--accent);color:#fff;border-color:var(--accent)}.btn-fill:hover{background:var(--accent2);color:#fff;transform:translateY(-1px);box-shadow:0 4px 20px rgba(79,156,247,.3)}
+.btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.hero-photo{display:flex;justify-content:flex-end}
+.photo-wrap{width:240px;height:280px;border-radius:16px;overflow:hidden;border:2px solid var(--border2);position:relative;box-shadow:0 0 60px rgba(79,156,247,.08)}.photo-wrap img{width:100%;height:100%;object-fit:cover}
+@media(max-width:768px){.hero{grid-template-columns:1fr;text-align:center;padding-top:80px}.hero-text h1{font-size:2rem}.hero-sub{margin:0 auto 20px}.hero-meta{justify-content:center}.hero-btns{justify-content:center}.hero-photo{justify-content:center}.photo-wrap{width:180px;height:210px}}
+section{max-width:var(--max);margin:0 auto;padding:56px 24px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:28px}.sec-head h2{font-size:1.3rem;font-weight:700;letter-spacing:-.02em;white-space:nowrap}.sec-line{flex:1;height:1px;background:var(--border)}.sec-tag{font-family:var(--mono);font-size:.7rem;color:var(--text3);padding:3px 10px;border:1px solid var(--border);border-radius:20px}
+.about-text{color:var(--text2);max-width:760px;font-size:.95rem}.about-text p+p{margin-top:12px}
+.res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.res-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;transition:all var(--ease)}.res-card:hover{border-color:var(--accent);box-shadow:0 0 30px var(--accent-glow)}
+.res-card .rc-tag{font-family:var(--mono);font-size:.65rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.res-card h3{font-size:.95rem;font-weight:600;margin-bottom:6px}.res-card p{font-size:.82rem;color:var(--text2);line-height:1.6}
+@media(max-width:768px){.res-grid{grid-template-columns:1fr}}
+.pub-stats{display:flex;gap:24px;margin-bottom:24px;flex-wrap:wrap}
+.ps-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 20px;text-align:center;flex:1;min-width:120px}.ps-num{font-family:var(--mono);font-size:1.2rem;font-weight:700;color:var(--accent)}.ps-label{font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+.pub-group-title{font-family:var(--mono);font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.pub-list{list-style:none}.pub-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04);display:grid;grid-template-columns:48px 1fr;gap:12px}.pub-item:last-child{border-bottom:0}
+.pub-yr{font-family:var(--mono);font-size:.75rem;color:var(--accent);padding-top:2px}.pub-title{font-size:.88rem;font-weight:500;line-height:1.5;margin-bottom:3px}.pub-title strong{color:var(--green)}
+.pub-venue{font-size:.78rem;color:var(--text3);font-style:italic}.pub-badge{display:inline-block;margin-top:4px;font-size:.65rem;font-weight:600;color:var(--gold);background:rgba(245,158,11,.1);padding:2px 8px;border-radius:4px;letter-spacing:.02em}
+@media(max-width:768px){.pub-item{grid-template-columns:40px 1fr}}
+.exp-item{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--border)}.exp-item:last-child{border-bottom:0}
+.exp-date{font-family:var(--mono);font-size:.78rem;color:var(--text3);padding-top:2px}.exp-role{font-weight:600;font-size:.95rem;margin-bottom:2px}.exp-org{font-size:.85rem;color:var(--accent);margin-bottom:4px}.exp-desc{font-size:.82rem;color:var(--text2);line-height:1.6}
+@media(max-width:768px){.exp-item{grid-template-columns:1fr;gap:2px}}
+.sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sk-group h3{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:10px}
+.sk-tags{display:flex;flex-wrap:wrap;gap:6px}.sk-tag{font-size:.78rem;padding:5px 14px;border-radius:6px;background:var(--bg2);border:1px solid var(--border);color:var(--text2);transition:all var(--ease)}.sk-tag:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:768px){.sk-grid{grid-template-columns:1fr}}
+.rev-tags{display:flex;flex-wrap:wrap;gap:8px}.rev-tag{font-size:.78rem;padding:6px 14px;border-radius:6px;background:var(--bg2);border:1px solid var(--border);color:var(--text2)}
+.award-item{display:flex;gap:10px;align-items:baseline;padding:8px 0}.award-icon{color:var(--gold);font-size:.9rem}.award-text{font-size:.88rem}.award-text strong{font-weight:600}.award-sub{color:var(--text3);font-size:.8rem}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all var(--ease)}.gal-card:hover{border-color:var(--accent);box-shadow:0 0 30px var(--accent-glow);transform:translateY(-2px)}
+.gal-card img{width:100%;height:180px;object-fit:cover;display:block}.gal-card .gal-cap{padding:12px;font-size:.78rem;color:var(--text2);line-height:1.5}.gal-card .gal-cap strong{color:var(--text);font-weight:600;display:block;margin-bottom:2px;font-size:.82rem}
+@media(max-width:768px){.gal-grid{grid-template-columns:1fr 1fr}}@media(max-width:480px){.gal-grid{grid-template-columns:1fr}}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;align-items:center;gap:12px;transition:all var(--ease);text-decoration:none;color:var(--text)}.cc:hover{border-color:var(--accent);box-shadow:0 0 30px var(--accent-glow);transform:translateY(-1px);color:var(--text)}
+.cc-icon{width:36px;height:36px;border-radius:8px;background:var(--bg3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);font-size:1rem}
+.cc-label{font-size:.7rem;color:var(--text3)}.cc-val{font-weight:600;font-size:.82rem}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr 1fr}}@media(max-width:480px){.contact-grid{grid-template-columns:1fr}}
+footer{max-width:var(--max);margin:0 auto;padding:28px 24px;text-align:center;font-size:.75rem;color:var(--text3);border-top:1px solid var(--border)}
+.fade{opacity:0;transform:translateY(16px);animation:fadeUp .6s ease forwards}@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.35s}
+</style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="index.html">Homepage</a>
-            <a href="publications.html">Publications</a>
-            <a href="news.html">News</a>
-            <a href="cv.html">CV</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
-        <div class="profile-section">
-            <img src="image.png" alt="Profile Picture" class="profile-img">
-            <div class="profile-details">
-                <h2>Muhammad Imran Sharif</h2>
-                <p>Ph.D. Student<br>Kansas State University<br>Department of Computer Science</p>
-                <ul class="contact-info">
-                    <li><a href="mailto:imransharif@ksu.edu">imransharif@ksu.edu</a></li>
-                    <li><a href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en&oi=ao">Google Scholar</a></li>
-                    <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-4786-6579">ORCID</a></li>
-                    <li><a href="https://www.linkedin.com/in/imransharif1996/">LinkedIn</a></li>
-                    <li><a href="https://www.scopus.com/authid/detail.uri?authorId=58825670100">Scopus</a></li>
-                    <li><a href="https://www.webofscience.com/wos/author/record/HJB-2089-2022">Web of Science</a></li>
-                    <li><a href="https://www.researchgate.net/profile/Muhammad-Sharif-73?ev=hdr_xprf">ResearchGate</a></li>
-                    
-                </ul>
-            </div>
-        </div>
-        <div class="content">
-            <p>Hello! I am Muhammad Imran Sharif, a dedicated Ph.D. student at Kansas State University in the Department of Computer Science. My research interests include Artificial Intelligence, Machine Learning, Computer Vision, and Image Processing. I am passionate about advancing the field of computer science through innovative research and collaboration.</p>
-            <p>My academic journey has been marked by notable achievements, including the Nebraska Engineering Recruitment Fellowship and the Exceptional PhD Candidate Fellowship. With a strong foundation in both theoretical knowledge and practical applications, I aim to contribute significantly to the scientific community.</p>
-            <p>In my current research, I am focusing on leveraging cutting-edge technologies to solve complex problems in computer vision. My goal is to develop algorithms and systems that can improve the accuracy and efficiency of visual recognition tasks, ultimately benefiting various real-world applications.</p>
-            <p>I am always open to new opportunities for collaboration and learning. Feel free to explore my Google Scholar and ORCID profiles for more details on my publications and research contributions. If you have any questions or would like to discuss potential collaborations, please do not hesitate to contact me via email.</p>
-        </div>
-    </div>
+<nav><div class="nav-in"><div class="nav-logo">M. Imran <span>Sharif</span></div><div class="nav-links" id="nl"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div><button class="ham" onclick="document.getElementById('nl').classList.toggle('open')" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+
+<header class="hero"><div class="hero-text"><h1 class="fade">Muhammad<br><span class="hl">Imran Sharif</span></h1><p class="hero-sub fade d1">PhD Candidate in Computer Science at Kansas State University. Building transformer-based deep learning systems for automated visual behavior recognition.</p><div class="hero-meta fade d2"><div class="hm-item"><div class="hm-num">30+</div><div class="hm-label">Publications</div></div><div class="hm-item"><div class="hm-num">18</div><div class="hm-label">H-Index</div></div><div class="hm-item"><div class="hm-num">1,823</div><div class="hm-label">Citations</div></div><div class="hm-item"><div class="hm-num">93.39</div><div class="hm-label">Impact Factor</div></div></div><div class="hero-btns fade d3"><a href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" class="btn btn-fill" target="_blank">Google Scholar</a><a href="https://github.com/imransharif1996" class="btn" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/imransharif1996/" class="btn" target="_blank">LinkedIn</a><a href="mailto:imransharif@ksu.edu" class="btn">Email</a></div></div><div class="hero-photo fade d4"><div class="photo-wrap"><img src="image.png" alt="Muhammad Imran Sharif"></div></div></header>
+
+<section id="about"><div class="sec-head"><h2>About</h2><div class="sec-line"></div><span class="sec-tag">01</span></div><div class="about-text"><p>I am a fourth-year PhD candidate in Computer Science at Kansas State University, advised by Dr. Doina Caragea. My dissertation focuses on transformer-based deep learning for automated rodent social behavior recognition, developing novel multi-stream architectures with cross-stream attention and adaptive fusion mechanisms.</p><p>My research spans deep learning, computer vision, multimodal learning, medical imaging, and agricultural AI. I design end-to-end transformer and attention-based architectures for complex visual understanding tasks, with particular expertise in video analysis, multi-stream feature fusion, and federated learning for distributed clinical data.</p></div></section>
+
+<section id="research"><div class="sec-head"><h2>Research Areas</h2><div class="sec-line"></div><span class="sec-tag">02</span></div><div class="res-grid"><div class="res-card"><div class="rc-tag">Core</div><h3>Computer Vision</h3><p>Vision transformers, video understanding, image segmentation, object detection, and visual feature analysis for real-world scenarios.</p></div><div class="res-card"><div class="rc-tag">Core</div><h3>Deep Learning Architectures</h3><p>Transformer-based models, attention mechanisms, multi-stream architectures, and adaptive fusion strategies for multimodal data.</p></div><div class="res-card"><div class="rc-tag">Applied</div><h3>Medical Imaging</h3><p>Multimodal brain tumor classification, clinical image analysis, federated learning for distributed clinical data, and decision support systems.</p></div><div class="res-card"><div class="rc-tag">Applied</div><h3>Agricultural AI</h3><p>Crop disease detection, pest localization, UAV-based imaging analysis, and deep learning pipelines for precision agriculture.</p></div></div></section>
+
+<section id="publications"><div class="sec-head"><h2>Publications</h2><div class="sec-line"></div><span class="sec-tag">03</span></div>
+<div class="pub-stats"><div class="ps-item"><div class="ps-num">30+</div><div class="ps-label">Papers</div></div><div class="ps-item"><div class="ps-num">18</div><div class="ps-label">H-Index</div></div><div class="ps-item"><div class="ps-num">1,823</div><div class="ps-label">Citations</div></div><div class="ps-item"><div class="ps-num">93.39</div><div class="ps-label">Impact Factor</div></div></div>
+<div class="pub-group-title">PhD Research</div><ul class="pub-list">
+<li class="pub-item"><span class="pub-yr">2026</span><div><div class="pub-title"><strong>M. I. Sharif</strong>, D. Caragea, "MSGL-Transformer: A Multi-Scale Global-Local Transformer for Rodent Social Behavior Recognition"</div><div class="pub-venue">arXiv:2604.07578. Under review at Scientific Reports.</div><span class="pub-badge">First Author · PhD</span></div></li>
+<li class="pub-item"><span class="pub-yr">2025</span><div><div class="pub-title"><strong>M. I. Sharif</strong>, D. Caragea, A. Iqbal, "Rodent social behavior recognition using a global context-aware vision transformer network"</div><div class="pub-venue">AI, vol. 6, no. 10, p. 264, 2025.</div><span class="pub-badge">First Author · PhD</span></div></li></ul>
+<div class="pub-group-title">MS Thesis</div><ul class="pub-list">
+<li class="pub-item"><span class="pub-yr">2021</span><div><div class="pub-title"><strong>M. I. Sharif</strong>, M. A. Khan, M. Alhussein, K. Aurangzeb, M. Raza, "A decision support system for multimodal brain tumor classification using deep learning"</div><div class="pub-venue">Complex &amp; Intelligent Systems, vol. 7, pp. 1–14, 2021.</div><span class="pub-badge">First Author · MS Thesis</span></div></li></ul>
+<div class="pub-group-title">BS Final Year Project</div><ul class="pub-list">
+<li class="pub-item"><span class="pub-yr">2022</span><div><div class="pub-title"><strong>M. I. Sharif</strong>, M. A. Khan, A. Alqahtani et al., "Deep learning and kurtosis-controlled, entropy-based framework for human gait recognition using video sequences"</div><div class="pub-venue">Electronics, vol. 11, no. 3, p. 334, 2022.</div><span class="pub-badge">First Author · BS Project</span></div></li></ul>
+<div class="pub-group-title">Journal Articles</div><ul class="pub-list">
+<li class="pub-item"><span class="pub-yr">2025</span><div><div class="pub-title">M. Z. Sajid et al., "EfficientPoseSegNet: a weakly supervised, attention-guided framework for human pose estimation and concealed object detection"</div><div class="pub-venue">Scientific Reports, 2025.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">I. Ahmad, J. Amin, M. I. Lali, F. Abbas, <strong>M. I. Sharif</strong>, "A novel Deeplabv3+ and vision-based transformer model for segmentation and classification of skin lesions"</div><div class="pub-venue">Biomedical Signal Processing and Control, vol. 92, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">J. Amin et al., "Localization model and rank-based feature selection for classification of COVID-19 stages"</div><div class="pub-venue">Expert Systems with Applications, vol. 239, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title"><strong>M. I. Sharif</strong> et al., "Federated learning for analysis of medical images: A survey"</div><div class="pub-venue">Journal of Computer Science, vol. 20, no. 5, 2024.</div><span class="pub-badge">First Author</span></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">S. Saleem, <strong>M. I. Sharif</strong> et al., "Comparison of deep learning models for multi-crop leaf disease detection"</div><div class="pub-venue">Agronomy, vol. 14, no. 10, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">T. Meraj, <strong>M. I. Sharif</strong> et al., "Computer vision-based plants phenotyping: A comprehensive survey"</div><div class="pub-venue">iScience, vol. 27, no. 1, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">S. M. Redwan et al., "Power spectral density-based resting-state EEG classification of first-episode psychosis"</div><div class="pub-venue">Scientific Reports, vol. 14, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">R. Hafeez et al., "A universal VR training platform for microscale robotic cell injection"</div><div class="pub-venue">SN Computer Science, vol. 5, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">M. H. Khan, <strong>M. I. Sharif</strong> et al., "Enhancing semantic web retrieval through ontology-driven feature extraction"</div><div class="pub-venue">Journal of Computer Science, vol. 20, no. 5, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">H. Bibi et al., "Phishing website detection using improved multilayered CNNs"</div><div class="pub-venue">Journal of Computer Science, vol. 20, no. 9, 2024.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">J. Amin et al., "Pest localization using YOLOv5 and classification based on quantum convolutional network"</div><div class="pub-venue">Agriculture, vol. 13, no. 3, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">A. M. Fayyaz, <strong>M. I. Sharif</strong> et al., "Analysis of diabetic retinopathy using deep learning"</div><div class="pub-venue">Information, vol. 14, no. 3, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">M. Irshad et al., "A novel light U-Net model for left ventricle segmentation using MRI"</div><div class="pub-venue">Mathematics, vol. 11, no. 14, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">M. Khalil, <strong>M. I. Sharif</strong> et al., "Deep learning-enhanced brain tumor prediction via entropy-coded BPSO"</div><div class="pub-venue">Computers, Materials &amp; Continua, vol. 77, no. 2, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">J. Naz, <strong>M. I. Sharif</strong> et al., "A comparative analysis of optimization algorithms for gastrointestinal abnormalities recognition"</div><div class="pub-venue">Biomedicines, vol. 11, no. 6, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">S. R. Shah et al., "Comparing Inception V3, VGG16, VGG19, CNN, and ResNet50 for early rice disease detection"</div><div class="pub-venue">Agronomy, vol. 13, no. 6, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">N. Shaukat, J. Amin, <strong>M. I. Sharif</strong> et al., "Classification and segmentation of diabetic retinopathy: A systemic review"</div><div class="pub-venue">Applied Sciences, vol. 13, no. 5, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">M. Zafar, <strong>M. I. Sharif</strong> et al., "Skin lesion analysis and cancer detection based on ML/DL techniques: A comprehensive survey"</div><div class="pub-venue">Life, vol. 13, no. 1, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">R. Zahra et al., "Camera-based interactive wall display using hand gesture recognition"</div><div class="pub-venue">Intelligent Systems with Applications, vol. 19, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">A. Sharif, <strong>M. I. Sharif</strong> et al., "SDN-enabled content dissemination scheme for the Internet of Vehicles"</div><div class="pub-venue">Computers, Materials &amp; Continua, vol. 75, no. 2, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">A. Sharif et al., "Traffic management in Internet of Vehicles using improved ant colony optimization"</div><div class="pub-venue">Computers, Materials &amp; Continua, vol. 75, no. 3, 2023.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2022</span><div><div class="pub-title">S. M. Hasan et al., "A machine learning framework for early-stage detection of autism spectrum disorders"</div><div class="pub-venue">IEEE Access, vol. 11, 2022.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2022</span><div><div class="pub-title">J. Amin et al., "A modified classical-quantum model for diabetic foot ulcer classification"</div><div class="pub-venue">Intelligent Decision Technologies, vol. 16, no. 1, 2022.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2022</span><div><div class="pub-title">M. Ramzan, M. Raza, <strong>M. I. Sharif</strong>, "Gastrointestinal tract polyp segmentation using graft-U-Net"</div><div class="pub-venue">Journal of Personalized Medicine, vol. 12, no. 9, 2022.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2022</span><div><div class="pub-title">M. J. Umer, <strong>M. I. Sharif</strong>, "A comprehensive survey on quantum machine learning"</div><div class="pub-venue">Int. J. of Health and Medical Communications, vol. 13, no. 5, 2022.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2020</span><div><div class="pub-title">M. A. Khan, S. Rubab, A. Kashif, <strong>M. I. Sharif</strong> et al., "Lungs cancer classification from CT images"</div><div class="pub-venue">Pattern Recognition Letters, vol. 129, 2020.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2019</span><div><div class="pub-title">M. A. Khan, <strong>M. I. Sharif</strong>, M. Raza et al., "Skin lesion segmentation and classification: A unified framework"</div><div class="pub-venue">Expert Systems, vol. 39, no. 7, 2019.</div></div></li></ul>
+<div class="pub-group-title">Books &amp; Chapters</div><ul class="pub-list">
+<li class="pub-item"><span class="pub-yr">2025</span><div><div class="pub-title">M. A. Naeem et al., "Egret Swarm Optimization-based Hybrid DNN for Diagnosis of Skin Cancer"</div><div class="pub-venue">In: Transforming Global Healthcare, Springer, 2025.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2024</span><div><div class="pub-title">S. M. M. Hasan et al., "A Generative Predictive Model for Medical Data via PCA and Iterative K-means Fusion"</div><div class="pub-venue">In: Generative AI in Neurodegenerative Disorders, River Publishers, 2024.</div></div></li></ul>
+<div class="pub-group-title">Posters &amp; Presentations</div><ul class="pub-list">
+<li class="pub-item"><span class="pub-yr">2025</span><div><div class="pub-title"><strong>M. I. Sharif</strong>, D. Caragea, "Rodent social behavior recognition using a global context-aware vision transformer network"</div><div class="pub-venue">Poster, CNAP Site Visit, Kansas State University, 2025.</div></div></li>
+<li class="pub-item"><span class="pub-yr">2023</span><div><div class="pub-title">E. Alfs-Votipka, <strong>M. I. Sharif</strong> et al., "Rat behavior recognition using deep learning and point-based annotation"</div><div class="pub-venue">Poster, CNAP Site Visit, Kansas State University, 2023.</div></div></li></ul>
+</section>
+
+<section id="experience"><div class="sec-head"><h2>Experience</h2><div class="sec-line"></div><span class="sec-tag">04</span></div><div>
+<div class="exp-item"><div class="exp-date">2023 — Present</div><div><div class="exp-role">Graduate Research &amp; Teaching Assistant</div><div class="exp-org">Kansas State University</div><div class="exp-desc">PhD research on rodent behavior recognition using deep learning and transformer-based video analysis. TA for CIS-200 (Intro to Java). Courses supported: CC 750, CC 730, CC 710.</div></div></div>
+<div class="exp-item"><div class="exp-date">Jan — Dec 2022</div><div><div class="exp-role">Faculty Lecturer</div><div class="exp-org">University of Wah, Pakistan</div><div class="exp-desc">Taught undergraduate courses including Computer Fundamentals, Digital Logic Design, Database Lab, and Basics of Machine Learning.</div></div></div>
+<div class="exp-item"><div class="exp-date">2019 — 2022</div><div><div class="exp-role">IT Specialist (Remote)</div><div class="exp-org">Caiman Haiti Foundation, Bronx, NY</div><div class="exp-desc">Managed organizational websites. Designed web platforms, implemented SEO strategies, and enhanced digital visibility.</div></div></div></div></section>
+
+<section id="education"><div class="sec-head"><h2>Education</h2><div class="sec-line"></div><span class="sec-tag">05</span></div><div>
+<div class="exp-item"><div class="exp-date">2023 — Present</div><div><div class="exp-role">PhD in Computer Science</div><div class="exp-org">Kansas State University · GPA 3.87/4.00</div><div class="exp-desc">Transformer-based architectures for rodent behavior recognition. Advisor: Dr. Doina Caragea.</div></div></div>
+<div class="exp-item"><div class="exp-date">2019 — 2021</div><div><div class="exp-role">MS in Computer Science</div><div class="exp-org">COMSATS University Islamabad · GPA 3.94/4.00</div><div class="exp-desc">Thesis: A Decision Support System for Multimodal Brain Tumor Classification using Deep Learning. Published in Complex &amp; Intelligent Systems. Advisor: Dr. Mudassar Raza.</div></div></div>
+<div class="exp-item"><div class="exp-date">2015 — 2019</div><div><div class="exp-role">BS in Computer Science</div><div class="exp-org">COMSATS University Islamabad · GPA 3.27/4.00</div><div class="exp-desc">Final Year Project: Deep Learning and Kurtosis-Controlled Entropy-based Framework for Human Gait Recognition. Published in Electronics Journal. Advisor: Dr. Muhammad Attique Khan.</div></div></div></div></section>
+
+<section id="skills"><div class="sec-head"><h2>Technical Skills</h2><div class="sec-line"></div><span class="sec-tag">06</span></div><div class="sk-grid"><div class="sk-group"><h3>Languages</h3><div class="sk-tags"><span class="sk-tag">Python</span><span class="sk-tag">MATLAB</span><span class="sk-tag">C++</span><span class="sk-tag">Java</span></div></div><div class="sk-group"><h3>Frameworks</h3><div class="sk-tags"><span class="sk-tag">PyTorch</span><span class="sk-tag">TensorFlow</span><span class="sk-tag">OpenCV</span><span class="sk-tag">scikit-learn</span></div></div><div class="sk-group"><h3>Tools &amp; Infra</h3><div class="sk-tags"><span class="sk-tag">Git</span><span class="sk-tag">SLURM / HPC</span><span class="sk-tag">Linux</span><span class="sk-tag">LaTeX</span><span class="sk-tag">Docker</span></div></div></div></section>
+
+<section id="reviewer"><div class="sec-head"><h2>Reviewer</h2><div class="sec-line"></div><span class="sec-tag">07</span></div><div class="rev-tags"><span class="rev-tag">IEEE Trans. on Artificial Intelligence</span><span class="rev-tag">IEEE Trans. on Image Processing</span><span class="rev-tag">IEEE Trans. on Computational Imaging</span><span class="rev-tag">IEEE Access</span><span class="rev-tag">Pattern Recognition Letters</span><span class="rev-tag">SN Computer Science</span><span class="rev-tag">Artificial Intelligence Review</span></div></section>
+
+<section id="awards"><div class="sec-head"><h2>Awards</h2><div class="sec-line"></div><span class="sec-tag">08</span></div><div><div class="award-item"><span class="award-icon">★</span><div class="award-text"><strong>Exceptional PhD Candidate Fellowship</strong><br><span class="award-sub">Kansas State University, 2023</span></div></div><div class="award-item"><span class="award-icon">★</span><div class="award-text"><strong>Nebraska Engineering Recruitment Fellowship</strong><br><span class="award-sub">University of Nebraska, 2023</span></div></div></div></section>
+
+<section id="gallery"><div class="sec-head"><h2>Gallery</h2><div class="sec-line"></div><span class="sec-tag">09</span></div><div class="gal-grid">
+<div class="gal-card"><img src="Poster%20Presentation%202025.jpeg" alt="CNAP Poster 2025"><div class="gal-cap"><strong>CNAP Poster 2025</strong>CNAP Site Visit, KSU Dept. of Psychological Sciences. Presented research on rodent behavior recognition.</div></div>
+<div class="gal-card"><img src="RootsofResearchTree2025.jpeg" alt="Roots of Research Tree"><div class="gal-cap"><strong>Roots of Research Tree</strong>April 21, 2025. Honoring Professor Doina Caragea at Engineering/Durland Hall.</div></div>
+<div class="gal-card"><img src="Profs-Doina-House-Party.jpg" alt="Lab Party"><div class="gal-cap"><strong>Lab Celebration</strong>Spring 2024 end-of-semester party at Professor Doina Caragea's house.</div></div>
+<div class="gal-card"><img src="PosterPresentation2023.png" alt="AI Symposium 2023"><div class="gal-cap"><strong>AI Symposium Poster</strong>October 16, 2023. Poster presentation at Hale Library, Kansas State University.</div></div></div></section>
+
+<section id="contact"><div class="sec-head"><h2>Contact</h2><div class="sec-line"></div><span class="sec-tag">10</span></div><div class="contact-grid">
+<a class="cc" href="mailto:imransharif@ksu.edu"><div class="cc-icon">✉</div><div><div class="cc-label">Email</div><div class="cc-val">imransharif@ksu.edu</div></div></a>
+<a class="cc" href="https://scholar.google.com/citations?user=hd8iAGoAAAAJ&hl=en" target="_blank"><div class="cc-icon">📖</div><div><div class="cc-label">Google Scholar</div><div class="cc-val">View Profile</div></div></a>
+<a class="cc" href="https://github.com/imransharif1996" target="_blank"><div class="cc-icon">⌨</div><div><div class="cc-label">GitHub</div><div class="cc-val">imransharif1996</div></div></a>
+<a class="cc" href="https://www.linkedin.com/in/imransharif1996/" target="_blank"><div class="cc-icon">🔗</div><div><div class="cc-label">LinkedIn</div><div class="cc-val">imransharif1996</div></div></a>
+<a class="cc" href="https://orcid.org/0000-0002-4786-6579" target="_blank"><div class="cc-icon">🆔</div><div><div class="cc-label">ORCID</div><div class="cc-val">0000-0002-4786-6579</div></div></a>
+<a class="cc" href="https://www.scopus.com/authid/detail.uri?authorId=58825670100" target="_blank"><div class="cc-icon">🔍</div><div><div class="cc-label">Scopus</div><div class="cc-val">View Profile</div></div></a></div></section>
+
+<footer>© 2026 Muhammad Imran Sharif · Kansas State University · Manhattan, KS</footer>
+<script>document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')))</script>
 </body>
 </html>
